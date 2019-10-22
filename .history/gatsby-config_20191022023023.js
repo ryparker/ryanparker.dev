@@ -15,9 +15,9 @@ module.exports = {
 		{
 			resolve: `gatsby-plugin-s3`,
 			options: {
-				bucketName: 'ryanisparker-site',
+				bucketName: 'portfolio-site',
 				protocol: 'https',
-				hostname: 'ryanisparker.com',
+				hostname: 'www.ryanisparker.com',
 			},
 		},
 		'gatsby-plugin-react-helmet',

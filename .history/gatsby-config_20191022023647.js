@@ -17,7 +17,7 @@ module.exports = {
 			options: {
 				bucketName: 'ryanisparker-site',
 				protocol: 'https',
-				hostname: 'ryanisparker.com',
+				hostname: 'www.ryanisparker.com',
 			},
 		},
 		'gatsby-plugin-react-helmet',

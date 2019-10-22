@@ -45,8 +45,8 @@
   ],
   "license": "MIT",
   "scripts": {
-    "deploy": "gatsby clean && npm run -n \"-r dotenv/config\" && npm run build && gatsby-plugin-s3 deploy --yes && aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION --paths \"/*\"",
-    "build": "gatsby clean && gatsby build",
+    "deploy": "npm run -n \"-r dotenv/config\" && npm run build && gatsby-plugin-s3 deploy --yes && aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION --paths \"/*\"",
+    "build": "gatsby build",
     "start": "gatsby clean && gatsby develop",
     "format": "prettier --write \"src/**/*.js\"",
     "reset": "rm -rf .cache/ public/",
