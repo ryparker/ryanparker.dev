@@ -73,7 +73,10 @@ const ContactForm = ({
 		{values.success && (
 			<InputField>
 				<Center>
-					<h4>Thanks, I'll get back to you soon!</h4>
+					<h4>
+						Your message has been successfully sent, I will get back to you
+						ASAP!
+					</h4>
 				</Center>
 			</InputField>
 		)}
@@ -118,12 +121,12 @@ export default withFormik({
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json',
-					Authorization: `Bearer c93600ae57f668cc26d956833d63eead`,
+					Authorization: `Bearer ${process.env.SENDGRID_API_KEY}`,
 				},
 				body: JSON.stringify({
 					service_id: 'default_service',
 					template_id: 'template_34Ag0cTo',
-					user_id: 'user_QIvE2CuqdNGMhArDLvUeA',
+					user_id: 'YOUR_USER_ID',
 					template_params: {
 						reply_to: name,
 						name,

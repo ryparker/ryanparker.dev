@@ -73,7 +73,10 @@ const ContactForm = ({
 		{values.success && (
 			<InputField>
 				<Center>
-					<h4>Thanks, I'll get back to you soon!</h4>
+					<h4>
+						Your message has been successfully sent, I will get back to you
+						ASAP!
+					</h4>
 				</Center>
 			</InputField>
 		)}
@@ -114,23 +117,15 @@ export default withFormik({
 					)
 					.join('&')
 			}
-			await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+			await fetch('https://mailthis.to/ryparker33@gmail.com', {
 				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json',
-					Authorization: `Bearer c93600ae57f668cc26d956833d63eead`,
-				},
-				body: JSON.stringify({
-					service_id: 'default_service',
-					template_id: 'template_34Ag0cTo',
-					user_id: 'user_QIvE2CuqdNGMhArDLvUeA',
-					template_params: {
-						reply_to: name,
-						name,
-						email,
-						message,
-						'g-recaptcha-response': recaptcha,
-					},
+				headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+				body: encode({
+					'form-name': 'portfolio-dev',
+					name,
+					email,
+					message,
+					'g-recaptcha-response': recaptcha,
 				}),
 			})
 			await setSubmitting(false)
