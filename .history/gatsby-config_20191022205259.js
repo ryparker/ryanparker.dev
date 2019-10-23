@@ -15,9 +15,9 @@ module.exports = {
 		{
 			resolve: `gatsby-plugin-s3`,
 			options: {
-				bucketName: process.env.BUCKET,
+				bucketName: '${process.env.BUCKET}',
 				protocol: 'https',
-				hostname: process.env.HOST_URL,
+				hostname: '${process.env.HOST_URL}',
 			},
 		},
 		'gatsby-plugin-react-helmet',
@@ -86,7 +86,7 @@ module.exports = {
 			resolve: 'gatsby-plugin-manifest',
 			options: {
 				name: config.defaultTitle,
-				short_name: 'Portfolio',
+				short_name: 'starter',
 				start_url: '/',
 				background_color: config.backgroundColor,
 				theme_color: config.themeColor,

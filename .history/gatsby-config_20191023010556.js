@@ -86,7 +86,7 @@ module.exports = {
 			resolve: 'gatsby-plugin-manifest',
 			options: {
 				name: config.defaultTitle,
-				short_name: 'Portfolio',
+				short_name: 'Ryan Parker',
 				start_url: '/',
 				background_color: config.backgroundColor,
 				theme_color: config.themeColor,
