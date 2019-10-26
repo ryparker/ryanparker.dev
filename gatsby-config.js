@@ -110,7 +110,7 @@ module.exports = {
 		{
 			resolve: `gatsby-plugin-scroll-reveal`,
 			options: {
-				threshold: 0.5,
+				threshold: 1,
 				once: false,
 				disable: false,
 				selector: '[data-sal]',
