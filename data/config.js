@@ -1,13 +1,12 @@
 module.exports = {
-	defaultTitle: 'Ryan Parker',
+	defaultTitle: 'Meet Ryan Parker',
 	logo: 'https://portfolio.smakosh.com/favicon/favicon-512.png',
 	author: 'Ryan Parker',
 	url: 'https://ryanparker.dev',
 	legalName: 'Ryan Parker',
-	defaultDescription:
-		'I’m Ryan and I’m a Software Development Engineer in Test!',
+	defaultDescription: 'I’m Ryan and I’m an Automation Engineer!',
 	socialLinks: {
-		twitter: 'http://www.twitter.com/ryanisparker',
+		twitter: 'https://www.twitter.com/ryanisparker',
 		github: 'https://github.com/ryparker',
 		linkedin: 'https://www.linkedin.com/in/ryanisparker/',
 	},

@@ -48,6 +48,10 @@ export const StyledImage = styled.img.attrs(props => {
 	padding: 4rem 0;
 `
 
+export const SkillTitle = styled.h2.attrs(props => {
+	return { 'data-sal': 'slide-left', 'data-sal-easing': 'ease' }
+})``
+
 export const SkillList = styled.ul.attrs(props => {
 	return { 'data-sal': 'slide-left', 'data-sal-easing': 'ease' }
 })`
@@ -69,6 +73,10 @@ export const Thumbnail = styled.div`
 	}
 
 	img {
+		@media (max-width: 960px) {
+			width: 50%;
+		}
+
 		width: 100%;
 	}
 `

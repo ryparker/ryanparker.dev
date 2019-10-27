@@ -86,7 +86,7 @@ module.exports = {
 			resolve: 'gatsby-plugin-manifest',
 			options: {
 				name: config.defaultTitle,
-				short_name: 'Portfolio',
+				short_name: 'Ryan Parker',
 				start_url: '/',
 				background_color: config.backgroundColor,
 				theme_color: config.themeColor,
@@ -110,7 +110,7 @@ module.exports = {
 		{
 			resolve: `gatsby-plugin-scroll-reveal`,
 			options: {
-				threshold: 1,
+				threshold: 0.75,
 				once: false,
 				disable: false,
 				selector: '[data-sal]',

@@ -1,15 +1,15 @@
 {
-  "name": "ryanisparker",
+  "name": "Ryan-Parker-Portfolio",
   "private": true,
   "description": "A simple portfolio built on gatsby",
   "version": "0.1.1",
   "author": "ryparker <ryparker33@gmail.com>",
   "dependencies": {
-    "babel-plugin-styled-components": "^1.10.0",
-    "dotenv": "^6.2.0",
-    "formik": "^1.5.8",
-    "gatsby": "^2.17.1",
-    "gatsby-image": "^2.0.20",
+    "babel-plugin-styled-components": "^1.10.6",
+    "dotenv": "^8.2.0",
+    "formik": "^2.0.2",
+    "gatsby": "^2.17.4",
+    "gatsby-image": "^2.2.29",
     "gatsby-plugin-alias-imports": "^1.0.5",
     "gatsby-plugin-canonical-urls": "^2.1.13",
     "gatsby-plugin-favicon": "^3.1.6",
@@ -32,9 +32,10 @@
     "react-dom": "^16.11.0",
     "react-google-recaptcha": "^2.0.1",
     "react-helmet": "^5.2.1",
+    "react-typed": "^1.2.0",
     "s3-deploy": "^1.4.0",
     "styled-components": "^4.1.3",
-    "yup": "^0.26.6"
+    "yup": "^0.27.0"
   },
   "keywords": [
     "ryanisparker",
@@ -54,14 +55,14 @@
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
   },
   "devDependencies": {
-    "babel-eslint": "^10.0.1",
-    "eslint": "^5.10.0",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-config-prettier": "^3.3.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jsx-a11y": "^6.1.2",
-    "eslint-plugin-react": "^7.11.1",
-    "eslint-plugin-react-hooks": "^1.3.0",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-react-hooks": "^2.2.0",
     "prettier": "^1.18.2"
   },
   "resolutions": {

@@ -17,6 +17,10 @@ export const IntroWrapper = styled.div`
 	@media (max-width: 960px) {
 		flex-direction: column;
 	}
+
+	.accent {
+		color: #e94e1b;
+	}
 `
 
 export const Details = styled.div`

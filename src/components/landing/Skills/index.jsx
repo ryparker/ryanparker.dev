@@ -9,6 +9,7 @@ import {
 	Details,
 	Thumbnail,
 	StyledImage,
+	SkillTitle,
 	SkillList,
 } from './styles'
 
@@ -18,36 +19,36 @@ export const Skills = () => (
 			<Thumbnail>
 				<StyledImage
 					src={dev}
-					alt="I’m Ryan and I’m a Software Development Engineer in Test!"
+					alt="I’m Ryan and I’m an Automation Engineer!"
 				/>
 				<StyledImage
 					src={analytics}
-					alt="I’m Ryan and I’m a Software Development Engineer in Test!"
+					alt="I’m Ryan and I’m an Automation Engineer!"
 				/>
 			</Thumbnail>
 			<Details>
 				<h1>Accomplishments</h1>
-				<h2>Automation</h2>
+				<SkillTitle>Automation</SkillTitle>
 				<SkillList>
 					<li>
 						Restructured and automated Jira to reflect development in real time.
 					</li>
 					<li>Integrated automated tests into CI/CD processes.</li>
 				</SkillList>
-				<h2>Accessability</h2>
+				<SkillTitle>Accessability</SkillTitle>
 				<SkillList>
 					<li>Integrated with AWS to enable deployments from slack.</li>
 					<li>
 						Empower everyone with the ability to kick off automated test suites.
 					</li>
 				</SkillList>
-				<h2>Feature Development</h2>
+				<SkillTitle>Feature Development</SkillTitle>
 				<SkillList>
 					<li>React</li>
 					<li>Storybook</li>
 					<li>Grails</li>
 				</SkillList>
-				<h2>Testing</h2>
+				<SkillTitle>Testing</SkillTitle>
 				<SkillList>
 					<li>
 						REST and SOAP API test suites that assert functionality,
@@ -58,7 +59,7 @@ export const Skills = () => (
 					<li>Unit and Integration tests in Grails, Java, and Javascript.</li>
 					<li>Health monitors for production services.</li>
 				</SkillList>
-				<h2>Documentation</h2>
+				<SkillTitle>Documentation</SkillTitle>
 				<SkillList>
 					<li>
 						Developed a service in grails that generates openAPI3 documentation.
