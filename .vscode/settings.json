@@ -3,6 +3,20 @@
   "editor.formatOnSave": true,
   // Enable/disable default JavaScript formatter (For Prettier)
   "javascript.format.enable": false,
-  // Use 'prettier-eslint' instead of 'prettier'. Other settings will only be fallbacks in case they could not be inferred from eslint rules.
-  "prettier.eslintIntegration": true
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#52c190",
+    "activityBar.activeBorder": "#965bc4",
+    "activityBar.foreground": "#15202b",
+    "activityBar.inactiveForeground": "#15202b99",
+    "activityBarBadge.background": "#965bc4",
+    "activityBarBadge.foreground": "#e7e7e7",
+    "titleBar.activeBackground": "#3ba576",
+    "titleBar.inactiveBackground": "#3ba57699",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.inactiveForeground": "#e7e7e799",
+    "statusBar.background": "#3ba576",
+    "statusBarItem.hoverBackground": "#52c190",
+    "statusBar.foreground": "#e7e7e7"
+  },
+  "peacock.color": "#3ba576"
 }
