@@ -3,7 +3,7 @@ import Typed from 'react-typed'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { Header } from 'Theme'
 import { Container, Button } from 'Common'
-import dev from 'Static/illustrations/dev.svg'
+import dev from 'Static/illustrations/dev.png'
 import { Wrapper, IntroWrapper, Details, Thumbnail } from './styles'
 
 export const Intro = () => (
@@ -20,7 +20,7 @@ export const Intro = () => (
             strings={[
               "I’m <span class='accent'>Ryan Parker</span>.",
               "I’m an <span class='accent'>Automation Engineer</span>.",
-              "I’m a <span class='accent'>QA Analyst</span>",
+              "I’m a <span class='accent'>QA Analyst</span>.",
               "I’m a <span class='accent'>Javascript Developer</span>.",
             ]}
             smartBackspace
