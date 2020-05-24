@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Wrapper = styled.div`
 	position: fixed;
@@ -12,7 +12,7 @@ export const Wrapper = styled.div`
 	background-color: #fff;
 	transition: all 350ms cubic-bezier(0.6, 0.05, 0.28, 0.91);
 
-	${({ active }) =>
+	${({active}) =>
 		active &&
 		`
 			width: 20%;
@@ -27,4 +27,4 @@ export const Wrapper = styled.div`
 				width: 75%;
 			}
 	`}
-`
+`;

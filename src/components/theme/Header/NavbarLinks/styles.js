@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Wrapper = styled.div`
 	a {
@@ -6,9 +6,9 @@ export const Wrapper = styled.div`
 		text-decoration: none;
 	}
 
-	${({ desktop }) =>
-		desktop
-			? `
+	${({desktop}) =>
+		desktop ?
+			`
 			@media (max-width: 960px) {
 					display: none;
 			}
@@ -20,8 +20,8 @@ export const Wrapper = styled.div`
 							margin-right: unset;
 					}
 			}
-		`
-			: `
+		` :
+			`
 			padding: 3rem;
 			display: flex;
 			flex-direction: column;
@@ -34,4 +34,4 @@ export const Wrapper = styled.div`
 					}
 			}
 	`}
-`
+`;

@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Wrapper = styled.div`
 	padding-bottom: 4rem;
@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
 	background-size: contain;
 	background-position: right top;
 	background-repeat: no-repeat;
-`
+`;
 
 export const IntroWrapper = styled.div`
 	padding: 4rem 0;
@@ -21,7 +21,7 @@ export const IntroWrapper = styled.div`
 	.accent {
 		color: #e94e1b;
 	}
-`
+`;
 
 export const Details = styled.div`
 	flex: 1;
@@ -43,7 +43,7 @@ export const Details = styled.div`
 
 	h4 {
 		margin-bottom: 2.5rem;
-		font-size: 32pt;
+		font-size: 28pt;
 		font-weight: normal;
 		color: #707070;
 
@@ -55,7 +55,7 @@ export const Details = styled.div`
 			font-size: 18pt;
 		}
 	}
-`
+`;
 
 export const Thumbnail = styled.div`
 	flex: 1;
@@ -67,4 +67,4 @@ export const Thumbnail = styled.div`
 	img {
 		width: 100%;
 	}
-`
+`;

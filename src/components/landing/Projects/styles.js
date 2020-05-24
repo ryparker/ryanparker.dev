@@ -1,8 +1,8 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Wrapper = styled.div`
 	padding: 2rem 0;
-`
+`;
 
 export const Grid = styled.div`
 	display: grid;
@@ -18,11 +18,11 @@ export const Grid = styled.div`
 	@media (max-width: 680px) {
 		grid-template-columns: 1fr;
 	}
-`
+`;
 
 export const Item = styled.div.attrs({
 	'data-sal': 'slide-left',
-	'data-sal-easing': 'ease-in',
+	'data-sal-easing': 'ease-in'
 })`
 	width: 100%;
 	height: 100%;
@@ -36,11 +36,11 @@ export const Item = styled.div.attrs({
 	p {
 		color: #707070;
 	}
-`
+`;
 
 export const Content = styled.div`
 	padding: 1rem 0;
-`
+`;
 
 export const Stats = styled.div`
 	display: flex;
@@ -61,4 +61,4 @@ export const Stats = styled.div`
 			margin-left: 0.5rem;
 		}
 	}
-`
+`;
