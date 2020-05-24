@@ -1,6 +1,6 @@
 # My portfolio site
 
-![AWS CodeBuild](https://codebuild.us-east-1.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoiaWlDUnBuNDgxUEdYMWg4U1RCVUd2QURmaW9xQzdZUFNtUUVZR0xnYitVTWVDQXRlR1FPT0pCQmxjNndzUnNkMGdnLzNrZkpIYVNjQjd5ZXhMSFI3NlYwPSIsIml2UGFyYW1ldGVyU3BlYyI6Ik9URVY4aGJXTFVFenlIbDUiLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=master)
+![AWS CodeBuild](https://codebuild.us-east-1.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoiTCtZaTR5VitTWFRXeGVyVVV5NDl1Yzk5VFA2ZFl6MkJnejVEeDlmZXJxcW5JbFR1Y2xPU21ScmJxNytmanBBc3I3amRubXJuL1kvRjVBbm94Yld1N2JvPSIsIml2UGFyYW1ldGVyU3BlYyI6IkNHT0ZFZjhuUllwQlF4UnAiLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=master)
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/xojs/xo)
 
 ## :rocket: Quick start
