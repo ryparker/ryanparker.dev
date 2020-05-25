@@ -24,14 +24,15 @@ export const Intro = () => (
 						loop
 						smartBackspace
 						showCursor
-						typeSpeed={80}
+						typeSpeed={30}
 						backSpeed={20}
 						strings={[
 							"I’m <span class='accent'>Ryan Parker</span>.",
 							"I’m an <span class='accent'>Automation Engineer</span>.",
-							"I specialize in <span class='accent'>automating quality</span>.",
-							"I specialize in <span class='accent'>testing frameworks</span>.",
-							"I specialize in <span class='accent'>development tools</span>.",
+							"I specialize in <span class='accent'>Testing Frameworks</span>.",
+							"I specialize in <span class='accent'>Development Tooling</span>.",
+							"I specialize in <span class='accent'>CI/CD Infrastructure</span>.",
+							"I specialize in <span class='accent'>Realtime Dashboards</span>.",
 						]}
 						backDelay={1000}
 						loopCount={0}
