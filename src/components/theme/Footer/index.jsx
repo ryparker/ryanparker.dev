@@ -1,7 +1,8 @@
-import React from 'react';
-import {Container} from 'Common';
-import {Wrapper, Flex, Links, Details} from './styles';
-import social from './social.json';
+import { Container } from 'Common'
+import React from 'react'
+
+import social from './social.json'
+import { Details, Flex, Links, Wrapper } from './styles'
 
 export const Footer = () => (
 	<Wrapper>
@@ -9,33 +10,17 @@ export const Footer = () => (
 			<Details>
 				<h2>Ryan Parker</h2>
 				<span>
-					© All rights are reserved | {new Date().getFullYear()} | Made with{' '}
-					<span aria-label="love" role="img">
-						💖
-					</span>{' '}
-					using{' '}
-					<a
-						href="https://www.gatsbyjs.org/"
-						rel="noopener noreferrer"
-						target="_blank"
-					>
-						Gatsby framework
-					</a>
+					© All rights are reserved | {new Date().getFullYear()} |{' '}
+					<a href='https://github.com/ryparker/ryanparker.dev'>Like the site? Check out the source code</a>
 				</span>
 			</Details>
 			<Links>
-				{social.map(({id, name, link, icon}) => (
-					<a
-						key={id}
-						href={link}
-						target="_blank"
-						rel="noopener noreferrer"
-						aria-label={`follow me on ${name}`}
-					>
-						<img width="24" src={icon} alt={name}/>
+				{social.map(({ id, name, link, icon }) => (
+					<a key={id} href={link} target='_blank' rel='noopener noreferrer' aria-label={`follow me on ${name}`}>
+						<img width='24' src={icon} alt={name} />
 					</a>
 				))}
 			</Links>
 		</Flex>
 	</Wrapper>
-);
+)

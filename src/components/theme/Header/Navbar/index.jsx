@@ -1,14 +1,14 @@
-import React from 'react';
-import {Link} from 'gatsby';
-import {Container} from 'Common';
-import NavbarLinks from '../NavbarLinks';
-import {Wrapper} from './styles';
+import { Container } from 'Common'
+import React from 'react'
+
+import NavbarLinks from '../NavbarLinks'
+import { Wrapper } from './styles'
 
 const Navbar = () => (
 	<Wrapper as={Container}>
-		<Link to="/">Ryan Parker</Link>
-		<NavbarLinks desktop/>
+		<a href='https://github.com/ryparker/ryanparker.dev'>Source Code</a>
+		<NavbarLinks desktop />
 	</Wrapper>
-);
+)
 
-export default Navbar;
+export default Navbar
