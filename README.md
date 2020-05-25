@@ -8,7 +8,7 @@
 1. Clone this repository.
 
 ```shell
-git clone https://github.com/ryparker/ryanparker.dev.git
+git clone https://github.com/ryparker/ryanparker.dev.git && cd ryanparker.dev
 ```
 
 2. Install dependencies
