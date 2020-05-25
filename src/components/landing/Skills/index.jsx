@@ -20,7 +20,7 @@ export const Skills = () => (
 			</Thumbnail>
 			<Details>
 				<h2>Projects</h2>
-				<SkillTitle>On deck</SkillTitle>
+				<SkillTitle>On Deck</SkillTitle>
 				<ul>
 					<Skill>Design & implement monitors page for operations dashboard.</Skill>
 					<Skill>Generate JSON schemas using new API test framework.</Skill>
