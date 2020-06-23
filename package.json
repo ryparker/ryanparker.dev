@@ -47,7 +47,7 @@
     "react-google-recaptcha": "^2.1.0",
     "react-helmet": "^6.1.0",
     "react-particles-js": "^3.2.1",
-    "react-scroll-parallax": "^2.3.2",
+    "react-scroll-parallax": "^2.3.3",
     "react-typed": "^1.2.0",
     "styled-components": "^5.1.1",
     "yup": "^0.29.0"
