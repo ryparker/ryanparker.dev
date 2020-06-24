@@ -31,7 +31,7 @@
     "gatsby-plugin-manifest": "^2.4.12",
     "gatsby-plugin-nprogress": "^2.3.4",
     "gatsby-plugin-offline": "^3.2.7",
-    "gatsby-plugin-react-helmet": "^3.3.2",
+    "gatsby-plugin-react-helmet": "^3.3.6",
     "gatsby-plugin-scroll-reveal": "^0.0.7",
     "gatsby-plugin-sharp": "^2.6.9",
     "gatsby-plugin-sitemap": "^2.4.5",
