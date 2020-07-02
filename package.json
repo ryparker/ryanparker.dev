@@ -37,7 +37,7 @@
     "gatsby-plugin-sitemap": "^2.4.5",
     "gatsby-plugin-styled-components": "^3.3.2",
     "gatsby-source-filesystem": "^2.3.11",
-    "gatsby-source-graphql": "^2.5.2",
+    "gatsby-source-graphql": "^2.5.9",
     "gatsby-transformer-sharp": "^2.5.5",
     "node-fetch": "^2.6.0",
     "prop-types": "^15.7.2",
