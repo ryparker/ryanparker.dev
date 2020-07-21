@@ -53,7 +53,7 @@
     "yup": "^0.29.0"
   },
   "devDependencies": {
-    "@types/node": "^14.0.13",
+    "@types/node": "^14.0.24",
     "dotenv": "^8.2.0",
     "eslint-config-xo-react": "^0.23.0",
     "eslint-plugin-react": "^7.20.0",
