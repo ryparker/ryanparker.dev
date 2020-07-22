@@ -1,8 +1,6 @@
 name: Install-Lint-Build-Changelog
 
 on:
-  pull_request:
-    branches: [master]
   push:
     branches: [master]
 
@@ -27,9 +25,9 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 14.x
-      - run: yarn install --offline
+      - run: yarn install
       - run: yarn bootstrap
       - run: yarn lint
       - run: yarn build
       - run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
-      - run: yarn run lerna version patch --yes --conventional-commits
+      - run: yarn run semantic-release
