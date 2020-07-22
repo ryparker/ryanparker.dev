@@ -1,13 +1,13 @@
-const path = require('path')
-const config = require('./data/config')
+const path = require('path');
+const config = require('./data/config');
 
-require('dotenv').config()
+require('dotenv').config();
 
 module.exports = {
 	siteMetadata: {
 		title: config.defaultTitle,
 		description: config.defaultDescription,
-		author: config.author,
+		author: config.author
 	},
 	plugins: [
 		'gatsby-plugin-react-helmet',
@@ -16,8 +16,8 @@ module.exports = {
 			resolve: 'gatsby-source-filesystem',
 			options: {
 				name: 'static',
-				path: `${__dirname}/static`,
-			},
+				path: path.join(__dirname, '/static')
+			}
 		},
 		'gatsby-transformer-sharp',
 		'gatsby-plugin-sharp',
@@ -28,24 +28,24 @@ module.exports = {
 				fieldName: 'github',
 				url: 'https://api.github.com/graphql',
 				headers: {
-					Authorization: `bearer ${process.env.GITHUB_TOKEN}`,
+					Authorization: `bearer ${process.env.GITHUB_TOKEN}`
 				},
-				fetchOptions: {},
-			},
+				fetchOptions: {}
+			}
 		},
 		{
 			resolve: 'gatsby-plugin-nprogress',
 			options: {
 				color: config.themeColor,
-				showSpinner: true,
-			},
+				showSpinner: true
+			}
 		},
 		{
 			resolve: 'gatsby-plugin-google-analytics',
 			options: {
 				trackingId: config.googleAnalyticsID,
-				head: true,
-			},
+				head: true
+			}
 		},
 		{
 			resolve: 'gatsby-plugin-favicon',
@@ -61,9 +61,9 @@ module.exports = {
 					firefox: true,
 					twitter: false,
 					yandex: false,
-					windows: false,
-				},
-			},
+					windows: false
+				}
+			}
 		},
 		{
 			resolve: 'gatsby-plugin-manifest',
@@ -74,8 +74,8 @@ module.exports = {
 				background_color: config.backgroundColor,
 				theme_color: config.themeColor,
 				display: 'minimal-ui',
-				icon: './static/favicon/favicon-512.png',
-			},
+				icon: './static/favicon/favicon-512.png'
+			}
 		},
 		'gatsby-plugin-offline',
 		{
@@ -86,9 +86,9 @@ module.exports = {
 					Common: path.resolve(__dirname, 'src/components/common'),
 					Static: path.resolve(__dirname, 'static/'),
 					Theme: path.resolve(__dirname, 'src/components/theme'),
-					Data: path.resolve(__dirname, 'data/config'),
-				},
-			},
+					Data: path.resolve(__dirname, 'data/config')
+				}
+			}
 		},
 		{
 			resolve: 'gatsby-plugin-scroll-reveal',
@@ -101,8 +101,8 @@ module.exports = {
 				disabledClassName: 'sal-disabled',
 				rootMargin: '0% 50%',
 				enterEventName: 'sal:in',
-				exitEventName: 'sal:out',
-			},
-		},
-	],
-}
+				exitEventName: 'sal:out'
+			}
+		}
+	]
+};

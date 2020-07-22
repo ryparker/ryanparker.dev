@@ -1,5 +1,7 @@
+import {Bar, Wrapper} from './styles';
+
+import PropTypes from 'prop-types';
 import React from 'react';
-import {Wrapper, Bar} from './styles';
 
 const Hamburger = ({sidebar, toggle}) => (
 	<Wrapper sidebar={sidebar} onClick={() => toggle(!sidebar)}>
@@ -8,5 +10,10 @@ const Hamburger = ({sidebar, toggle}) => (
 		<Bar bottom sidebar={sidebar}/>
 	</Wrapper>
 );
+
+Hamburger.propTypes = {
+	sidebar: PropTypes.bool,
+	toggle: PropTypes.func
+};
 
 export default Hamburger;

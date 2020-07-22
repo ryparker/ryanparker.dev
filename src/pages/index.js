@@ -1,13 +1,13 @@
-import { Layout, Seo } from 'Common'
-import { Contact, Intro, Projects, Skills } from 'Components/landing'
-import React from 'react'
-import Particles from 'react-particles-js'
+import {Contact, Intro, Projects, Roadmap, Stars} from 'Components/landing';
+import {Layout, Seo} from 'Common';
 
-import particleConfig from './particle-config.json'
+import Particles from 'react-particles-js';
+import React from 'react';
+import particleConfig from './particle-config.json';
 
-export default () => (
-	<Layout style={{ position: 'absolute', height: '100%', width: '100%' }}>
-		<Seo />
+const App = () => (
+	<Layout style={{position: 'absolute', height: '100%', width: '100%'}}>
+		<Seo/>
 		<Particles
 			style={{
 				position: 'fixed',
@@ -18,13 +18,16 @@ export default () => (
 				top: 0,
 				left: 0,
 				zIndex: '-99',
-				overflow: 'auto',
+				overflow: 'auto'
 			}}
 			params={particleConfig}
 		/>
-		<Intro />
-		<Projects />
-		<Skills />
-		<Contact />
+		<Intro/>
+		<Projects/>
+		<Stars/>
+		<Roadmap/>
+		<Contact/>
 	</Layout>
-)
+);
+
+export default App;

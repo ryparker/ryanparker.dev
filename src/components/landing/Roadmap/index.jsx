@@ -1,32 +1,33 @@
-import { Container } from 'Common'
-import React from 'react'
-import dev from 'Static/illustrations/skills.svg'
-
 import {
-  Details,
-  Skill,
-  SkillsWrapper,
-  SkillTitle,
-  StyledImage,
-  Thumbnail,
-  Wrapper,
-} from './styles'
+	Details,
+	Skill,
+	SkillTitle,
+	SkillsWrapper,
+	StyledImage,
+	Thumbnail,
+	Wrapper
+} from './styles';
 
-export const Skills = () => (
-	<Wrapper id='about'>
+import {Container} from 'Common';
+import React from 'react';
+import dev from 'Static/illustrations/roadmap.svg';
+
+export const Roadmap = () => (
+	<Wrapper id="roadmap">
 		<SkillsWrapper as={Container}>
 			<Thumbnail>
-				<StyledImage src={dev} alt='Man presenting analytics' />
+				<StyledImage src={dev} alt="Man presenting analytics"/>
 			</Thumbnail>
 			<Details>
-				<h2>Projects</h2>
+				<h2>Roadmap</h2>
 				<SkillTitle>On Deck</SkillTitle>
 				<ul>
+					<Skill>Deploy in-house monitor solution.</Skill>
 					<Skill>Design & implement monitors page for operations dashboard.</Skill>
-					<Skill>Generate JSON schemas using new API test framework.</Skill>
 				</ul>
 				<SkillTitle>Recently Completed</SkillTitle>
 				<ul>
+					<Skill>Generate JSON schemas using new API test framework.</Skill>
 					<Skill>Develop test harness for API testing using Jest.</Skill>
 					<Skill>Design and stand up an internal operations dashboard.</Skill>
 					<Skill>Integrate test suites into AWS deployment process.</Skill>
@@ -37,4 +38,4 @@ export const Skills = () => (
 			</Details>
 		</SkillsWrapper>
 	</Wrapper>
-)
+);

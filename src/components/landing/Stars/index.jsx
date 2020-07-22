@@ -6,21 +6,21 @@ import React from 'react';
 import forkIcon from 'Static/icons/fork.svg';
 import starIcon from 'Static/icons/star.svg';
 
-export const Projects = () => {
+export const Stars = () => {
 	const {
 		github: {
-			user: {
-				pinnedItems: {edges}
+			repositoryOwner: {
+				starredRepositories: {edges}
 			}
 		}
 	} = useStaticQuery(graphql`
 		{
 			github {
-				user(login: "ryparker") {
-					pinnedItems(first: 6) {
-						edges {
-							node {
-								... on GitHub_Repository {
+				repositoryOwner(login: "ryparker") {
+					... on GitHub_User {
+						starredRepositories(orderBy: { field: STARRED_AT, direction: DESC }, first: 3) {
+							edges {
+								node {
 									id
 									name
 									url
@@ -38,8 +38,8 @@ export const Projects = () => {
 		}
 	`);
 	return (
-		<Wrapper as={Container} id="projects">
-			<h2>Projects</h2>
+		<Wrapper as={Container} id="Stars">
+			<h2>Recently Starred</h2>
 			<Grid>
 				{edges.map(({node}) => (
 					<Item key={node.id} as="a" href={node.url} target="_blank" rel="noopener noreferrer">

@@ -9,8 +9,10 @@ import {
 	socialLinks,
 	url
 } from 'Data';
-import React from 'react';
+
 import {Helmet} from 'react-helmet';
+import PropTypes from 'prop-types';
+import React from 'react';
 import Thumbnail from 'Static/thumbnail/thumbnail.png';
 
 export const Seo = ({title = defaultTitle, description = defaultDescription, location = ''}) => {
@@ -59,4 +61,10 @@ export const Seo = ({title = defaultTitle, description = defaultDescription, loc
 			<html lang="en" dir="ltr"/>
 		</Helmet>
 	);
+};
+
+Seo.propTypes = {
+	title: PropTypes.string,
+	description: PropTypes.string,
+	location: PropTypes.string
 };
