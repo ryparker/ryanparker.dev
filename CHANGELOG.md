@@ -1,3 +1,11 @@
+## [1.0.1](https://github.com/ryparker/ryanparker.dev/compare/v1.0.0...v1.0.1) (2020-07-22)
+
+
+### Bug Fixes
+
+* **license:** removed MIT license and set to "UNLICENSED" ([47cd8c9](https://github.com/ryparker/ryanparker.dev/commit/47cd8c9edf6f07558c1aa8a82865fb13a26e7932))
+* **lockfile:** updated yarn.lock ([32c6785](https://github.com/ryparker/ryanparker.dev/commit/32c67855e82d5bc6b9cfca7a421fb5a22a5f62e4))
+
 # 1.0.0 (2020-07-22)
 
 
