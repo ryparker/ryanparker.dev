@@ -26,6 +26,7 @@
       "camelcase": 0,
       "import/no-unassigned-import": 0,
       "import/extensions": 0,
+      "react/boolean-prop-naming": 1,
       "no-alert": 1
     }
   },
@@ -38,6 +39,15 @@
   "lint-staged": {
     "./src/**/*": [
       "xo . --fix"
+    ]
+  },
+  "release": {
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      "@semantic-release/git",
+      "@semantic-release/github"
     ]
   },
   "dependencies": {
@@ -74,6 +84,8 @@
   },
   "devDependencies": {
     "@types/node": "^14.0.24",
+    "commitizen": "^4.1.2",
+    "cz-conventional-changelog": "3.2.0",
     "dotenv": "^8.2.0",
     "eslint-config-xo-react": "^0.23.0",
     "eslint-plugin-react": "^7.20.3",
@@ -81,6 +93,7 @@
     "husky": "^4.2.5",
     "lint-staged": "^10.2.11",
     "prettier": "^2.0.5",
+    "semantic-release": "^17.1.1",
     "xo": "^0.32.1"
   },
   "keywords": [
@@ -91,5 +104,10 @@
     "react",
     "graphql",
     "aws"
-  ]
+  ],
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }

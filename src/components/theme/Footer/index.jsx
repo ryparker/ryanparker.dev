@@ -10,8 +10,8 @@ export const Footer = () => (
 			<Details>
 				<h2>Ryan Parker</h2>
 				<span>
-					© All rights are reserved | {new Date().getFullYear()} |{' '}
-					<a href="https://github.com/ryparker/ryanparker.dev">Like the site? Check out the source code</a>
+					© All rights are reserved | {new Date().getFullYear()} |{' Like the site? Check out the '}
+					<a href="https://github.com/ryparker/ryanparker.dev" target="_blank" rel="noopener noreferrer">source code</a>
 				</span>
 			</Details>
 			<Links>
