@@ -10,6 +10,10 @@ export const Wrapper = styled.div`
 	@media (max-width: 1960px) {
 		padding: 14rem 0 4rem;
 	}
+
+	@media (max-width: 680px) {
+		padding: 14rem 0 1rem;
+	}
 `;
 
 export const Flex = styled.div`

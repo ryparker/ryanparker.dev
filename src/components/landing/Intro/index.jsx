@@ -3,7 +3,7 @@ import {Details, IntroWrapper, Thumbnail, Wrapper} from './styles';
 
 import {Header} from 'Theme';
 import React from 'react';
-import Typed from 'react-typed';
+import Typed from './Typed';
 import dev from 'Static/illustrations/dev.png';
 
 function openResumeTab() {
@@ -19,27 +19,7 @@ export const Intro = () => (
 		<IntroWrapper as={Container}>
 			<Details>
 				<h1>Hi there!</h1>
-				<h4>
-					<Typed
-						loop
-						smartBackspace
-						showCursor
-						typeSpeed={30}
-						backSpeed={20}
-						strings={[
-							'I’m <span class=\'accent\'>Ryan Parker</span>.',
-							'I’m an <span class=\'accent\'>Automation Engineer</span>.',
-							'I specialize in <span class=\'accent\'>Testing Frameworks</span>.',
-							'I specialize in <span class=\'accent\'>Development Tooling</span>.',
-							'I specialize in <span class=\'accent\'>CI/CD Infrastructure</span>.',
-							'I specialize in <span class=\'accent\'>Realtime Dashboards</span>.'
-						]}
-						backDelay={1000}
-						loopCount={0}
-						cursorChar="|"
-						className="typed"
-					/>
-				</h4>
+				<Typed/>
 				<Button id="resume" onClick={() => openResumeTab()}>
 					Résumé
 				</Button>

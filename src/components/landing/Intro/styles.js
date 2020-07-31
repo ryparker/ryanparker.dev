@@ -40,21 +40,6 @@ export const Details = styled.div`
 			font-size: 30pt;
 		}
 	}
-
-	h4 {
-		margin-bottom: 2.5rem;
-		font-size: 28pt;
-		font-weight: normal;
-		color: #707070;
-
-		@media (max-width: 1370px) {
-			font-size: 22pt;
-		}
-
-		@media (max-width: 680px) {
-			font-size: 18pt;
-		}
-	}
 `;
 
 export const Thumbnail = styled.div`

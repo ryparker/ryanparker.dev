@@ -8,6 +8,7 @@ export const Wrapper = styled.div`
 
   @media (max-width: 960px) {
     flex-direction: column;
+    padding: 0;
   }
 `;
 
@@ -36,7 +37,6 @@ export const Details = styled.div`
   }
 
   img {
-    padding: 4rem 0;
   }
 `;
 

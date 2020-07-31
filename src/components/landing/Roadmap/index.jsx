@@ -1,9 +1,8 @@
 import {
 	Details,
-	Skill,
-	SkillTitle,
-	SkillsWrapper,
-	StyledImage,
+	Milestone,
+	MilestoneTitle,
+	MilestonesWrapper,
 	Thumbnail,
 	Wrapper
 } from './styles';
@@ -14,28 +13,28 @@ import dev from 'Static/illustrations/roadmap.svg';
 
 export const Roadmap = () => (
 	<Wrapper id="roadmap">
-		<SkillsWrapper as={Container}>
+		<MilestonesWrapper as={Container}>
 			<Thumbnail>
-				<StyledImage src={dev} alt="Man presenting analytics"/>
+				<img src={dev} alt="Man presenting analytics"/>
 			</Thumbnail>
 			<Details>
 				<h2>Roadmap</h2>
-				<SkillTitle>On Deck</SkillTitle>
+				<MilestoneTitle>On Deck</MilestoneTitle>
 				<ul>
-					<Skill>Deploy in-house monitor solution.</Skill>
-					<Skill>Design & implement monitors page for operations dashboard.</Skill>
+					<Milestone>Deploy in-house monitor solution.</Milestone>
+					<Milestone>Design & implement monitors page for operations dashboard.</Milestone>
 				</ul>
-				<SkillTitle>Recently Completed</SkillTitle>
+				<MilestoneTitle>Recently Completed</MilestoneTitle>
 				<ul>
-					<Skill>Generate JSON schemas using new API test framework.</Skill>
-					<Skill>Develop test harness for API testing using Jest.</Skill>
-					<Skill>Design and stand up an internal operations dashboard.</Skill>
-					<Skill>Integrate test suites into AWS deployment process.</Skill>
-					<Skill>Develop reporting framework that supports presenting trends in test results.</Skill>
-					<Skill>2020 Test automation roadmap.</Skill>
-					<Skill>Serverless Slack applications that interface with AWS, Jira, Github.</Skill>
+					<Milestone>Generate JSON schemas using new API test framework.</Milestone>
+					<Milestone>Develop test harness for API testing using Jest.</Milestone>
+					<Milestone>Design and stand up an internal operations dashboard.</Milestone>
+					<Milestone>Integrate test suites into AWS deployment process.</Milestone>
+					<Milestone>Develop reporting framework that supports presenting trends in test results.</Milestone>
+					<Milestone>2020 Test automation roadmap.</Milestone>
+					<Milestone>Serverless Slack applications that interface with AWS, Jira, Github.</Milestone>
 				</ul>
 			</Details>
-		</SkillsWrapper>
+		</MilestonesWrapper>
 	</Wrapper>
 );

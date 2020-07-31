@@ -1,13 +1,14 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
+	padding-bottom: 4rem;
 	background-image: url('../illustrations/details.svg');
 	background-size: contain;
 	background-position: left top;
 	background-repeat: no-repeat;
 `;
 
-export const SkillsWrapper = styled.div`
+export const MilestonesWrapper = styled.div`
 	padding: 4rem 0;
 	display: flex;
 	align-items: center;
@@ -20,10 +21,8 @@ export const SkillsWrapper = styled.div`
 
 export const Details = styled.div`
 	flex: 1;
-	padding-left: 2rem;
 
 	@media (max-width: 960px) {
-		padding-left: unset;
 		width: 100%;
 	}
 
@@ -39,20 +38,15 @@ export const Details = styled.div`
 		font-weight: normal;
 		line-height: 1.3;
 		color: #707070;
+		word-break: true;
 	}
 `;
 
-export const StyledImage = styled.img.attrs(_ => {
-	return {};
-})`
-	padding: 4rem 0;
-`;
-
-export const SkillTitle = styled.h3.attrs(_ => {
+export const MilestoneTitle = styled.h3.attrs(_ => {
 	return {'data-sal': 'slide-left', 'data-sal-easing': 'ease'};
 })``;
 
-export const Skill = styled.li.attrs(_ => {
+export const Milestone = styled.li.attrs(_ => {
 	return {'data-sal': 'slide-left', 'data-sal-easing': 'ease'};
 })``;
 
@@ -65,10 +59,6 @@ export const Thumbnail = styled.div`
 	}
 
 	img {
-		@media (max-width: 960px) {
-			width: 50%;
-		}
-
 		width: 100%;
 	}
 `;
