@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/ryparker/ryanparker.dev/compare/v1.0.1...v1.0.2) (2020-07-31)
+
+
+### Bug Fixes
+
+* **layout:** fixed horizontal overflow, and typed.js animation pushing lower elements ([ec22b57](https://github.com/ryparker/ryanparker.dev/commit/ec22b57dcaf32b388a73b8ff314d8cbee99307b0))
+
 ## [1.0.1](https://github.com/ryparker/ryanparker.dev/compare/v1.0.0...v1.0.1) (2020-07-22)
 
 
