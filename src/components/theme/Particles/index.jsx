@@ -13,6 +13,7 @@ export const Particles = () => {
 				overflow: 'hidden'
 			}}
 			params={particleConfig}
+			data-cy="particles"
 		/>
 	);
 };

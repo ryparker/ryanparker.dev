@@ -18,11 +18,11 @@ export const Wrapper = styled.div`
 		`
 			right: 18%;
 			top: 1.4rem;
-		
+
 			@media (max-width: 960px) {
 				right: 35%;
 			}
-		
+
 			@media (max-width: 600px) {
 				right: 66%;
 			}

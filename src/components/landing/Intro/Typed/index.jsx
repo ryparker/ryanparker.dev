@@ -6,7 +6,6 @@ const baseText = 'I’m <span class=\'accent\'>Ryan Parker</span>.<br/>';
 
 const Typed = () => (
 	<TypeArea>
-		<h4>
 			<ReactTyped
 				loop
 				smartBackspace
@@ -26,7 +25,6 @@ const Typed = () => (
 				cursorChar="|"
 				className="typed"
 			/>
-		</h4>
 	</TypeArea>
 );
 

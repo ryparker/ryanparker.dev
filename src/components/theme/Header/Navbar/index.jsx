@@ -4,8 +4,8 @@ import React from 'react';
 import {Wrapper} from './styles';
 
 const Navbar = () => (
-	<Wrapper as={Container}>
-		<a href="https://github.com/ryparker/ryanparker.dev">Source Code</a>
+	<Wrapper as={Container} data-cy="navbar">
+		<a href="https://github.com/ryparker/ryanparker.dev" target="_blank" rel="noopener noreferrer">Source Code</a>
 		<NavbarLinks desktop/>
 	</Wrapper>
 );

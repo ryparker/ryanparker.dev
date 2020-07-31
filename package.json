@@ -12,7 +12,9 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "yarn clean && gatsby develop",
-    "test": "yarn lint",
+    "test": "cypress run",
+    "cypress": "cypress open",
+    "update-screenshots": "cypress run --env updateSnapshots=true",
     "lint": "xo .",
     "fix": "xo . --fix",
     "clean": "gatsby clean"
@@ -53,7 +55,6 @@
   "dependencies": {
     "formik": "^2.1.5",
     "gatsby": "^2.24.23",
-    "gatsby-image": "^2.4.14",
     "gatsby-plugin-alias-imports": "^1.0.5",
     "gatsby-plugin-canonical-urls": "^2.3.10",
     "gatsby-plugin-favicon": "^3.1.6",
@@ -87,6 +88,8 @@
     "@semantic-release/git": "^9.0.0",
     "@types/node": "^14.0.27",
     "commitizen": "^4.1.2",
+    "cypress": "^4.11.0",
+    "cypress-image-snapshot": "^3.1.1",
     "cz-conventional-changelog": "3.2.0",
     "dotenv": "^8.2.0",
     "eslint-config-xo-react": "^0.23.0",

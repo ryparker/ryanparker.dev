@@ -20,7 +20,14 @@ module.exports = {
 			}
 		},
 		'gatsby-transformer-sharp',
-		'gatsby-plugin-sharp',
+		{
+			resolve: 'gatsby-plugin-sharp',
+			options: {
+				useMozJpeg: false,
+				stripMetadata: true,
+				defaultQuality: 75,
+			},
+		},
 		{
 			resolve: 'gatsby-source-graphql',
 			options: {
@@ -74,13 +81,21 @@ module.exports = {
 				background_color: config.backgroundColor,
 				theme_color: config.themeColor,
 				display: 'minimal-ui',
-				icon: './static/favicon/favicon-512.png'
+				icon: './static/favicon/favicon-512.png',
+				purpose: "any maskable",
+				options: {
+					icon: './static/favicon/favicon-512.png',
+					cache_busting_mode: 'none'
+			 }
 			}
 		},
 		'gatsby-plugin-offline',
 		{
 			resolve: 'gatsby-plugin-alias-imports',
 			options: {
+				workboxConfig: {
+					globPatterns: ['**/static/favicon/*']
+			 	},
 				alias: {
 					Components: path.resolve(__dirname, 'src/components'),
 					Common: path.resolve(__dirname, 'src/components/common'),
