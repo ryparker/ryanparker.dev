@@ -25,8 +25,8 @@ module.exports = {
 			options: {
 				useMozJpeg: false,
 				stripMetadata: true,
-				defaultQuality: 75,
-			},
+				defaultQuality: 75
+			}
 		},
 		{
 			resolve: 'gatsby-source-graphql',
@@ -82,7 +82,7 @@ module.exports = {
 				theme_color: config.themeColor,
 				display: 'minimal-ui',
 				icon: './static/favicon/favicon-512.png',
-				purpose: "any maskable",
+				purpose: 'any maskable',
 				options: {
 					icon: './static/favicon/favicon-512.png',
 					cache_busting_mode: 'none'

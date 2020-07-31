@@ -15,8 +15,8 @@
     "test": "cypress run",
     "cypress": "cypress open",
     "update-screenshots": "cypress run --env updateSnapshots=true",
-    "lint": "xo .",
-    "fix": "xo . --fix",
+    "lint": "xo src",
+    "fix": "xo src --fix",
     "clean": "gatsby clean"
   },
   "xo": {
