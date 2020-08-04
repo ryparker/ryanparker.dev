@@ -14,7 +14,7 @@
     "serve": "gatsby serve",
     "develop": "yarn clean && gatsby develop",
     "watch": "run-p -s develop cypress",
-    "test": "nyc cypress run",
+    "test": "yarn lint",
     "cypress": "cypress open",
     "update-screenshots": "cypress run --env updateSnapshots=true",
     "lint": "xo src",
