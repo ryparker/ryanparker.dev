@@ -1,11 +1,15 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-	padding: 4rem 0;
+	padding: 4rem 2rem;
 	display: flex;
 	align-items: flex-start;
-	justify-content: space-between;
+	justify-content: space-evenly;
 	flex-direction: column;
+
+	@media (max-width: 680px) {
+    padding: 1rem;
+  }
 `;
 
 export const Grid = styled.div`
@@ -20,7 +24,7 @@ export const Grid = styled.div`
 	}
 
 	@media (max-width: 680px) {
-		grid-template-columns: 1fr;
+		grid-template-columns: repeat(1, 1fr);
 	}
 `;
 
@@ -31,7 +35,7 @@ export const Item = styled.div.attrs({
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
-	box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.11);
+	box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.44);
 
 	h4 {
 		color: #212121;

@@ -10,7 +10,7 @@ export const Projects = () => {
 	const {
 		github: {
 			user: {
-				pinnedItems: {edges}
+				pinnedItems: {nodes}
 			}
 		}
 	} = useStaticQuery(graphql`
@@ -18,17 +18,15 @@ export const Projects = () => {
 			github {
 				user(login: "ryparker") {
 					pinnedItems(first: 6) {
-						edges {
-							node {
-								... on GitHub_Repository {
-									id
-									name
-									url
-									description
-									forkCount
-									stargazers {
-										totalCount
-									}
+						nodes {
+							... on GitHub_Repository {
+								id
+								name
+								url
+								description
+								forkCount
+								stargazers {
+									totalCount
 								}
 							}
 						}
@@ -37,11 +35,12 @@ export const Projects = () => {
 			}
 		}
 	`);
+
 	return (
 		<Wrapper as={Container} id="projects">
 			<h2>Projects</h2>
 			<Grid>
-				{edges.map(({node}) => (
+				{nodes.map(node => (
 					<Item key={node.id} as="a" href={node.url} target="_blank" rel="noopener noreferrer">
 						<Card>
 							<Content>

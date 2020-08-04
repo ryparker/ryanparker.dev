@@ -19,7 +19,7 @@ export const IntroWrapper = styled.div`
 	}
 
 	.accent {
-		color: #e94e1b;
+		color: #FF6584;
 	}
 `;
 
@@ -44,12 +44,23 @@ export const Details = styled.div`
 
 export const Thumbnail = styled.div`
 	flex: 1;
+	position: relative;
+	display: inline-block;
 
-	@media (max-width: 960px) {
-		width: 100%;
+	.background {
+		display: block;
+		height: auto;
 	}
 
-	img {
-		width: 100%;
+	.overlay{
+		:hover {
+			transform: rotate( 15deg );
+		}
+		width: 28%;
+		position: absolute;
+		bottom: 0;
+		right: 18%;
 	}
+
+
 `;

@@ -1,5 +1,12 @@
 {
   "compilerOptions": {
-    "rootDirs": ["src/components"]
+    "baseUrl": "./src",
+    "paths": {
+      "Components/*": ["components/*"],
+      "Common/*": ["common/components/*"],
+      "Static/*": ["static/*"],
+      "Theme/*": ["components/theme/*"],
+      "Data/*": ["data/config/*"]
+    }
   }
 }

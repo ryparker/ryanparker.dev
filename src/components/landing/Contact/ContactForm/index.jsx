@@ -7,10 +7,9 @@ import {ErrorMessage, FastField, Form, withFormik} from 'formik';
 import PropTypes from 'prop-types';
 import React from 'react';
 import Recaptcha from 'react-google-recaptcha';
-import fetch from 'node-fetch';
-import {reCaptchaKey} from 'Data';
+import emailjs from 'emailjs-com';
 
-const EMAIL_API_TOKEN = process.env.EMAIL_API_TOKEN;
+const reCaptchaKey = process.env.RE_CAPTCHA_KEY;
 const EMAIL_USER_ID = process.env.EMAIL_USER_ID;
 const EMAIL_TEMPLATE_ID = process.env.EMAIL_TEMPLATE_ID;
 
@@ -105,34 +104,25 @@ export default withFormik({
 			recaptcha: Yup.string().required('Robots are not welcome yet!')
 		}),
 	handleSubmit: async ({name, email, message, recaptcha}, {setSubmitting, resetForm, setFieldValue}) => {
-		try {
-			await fetch('https://api.emailjs.com/api/v1.0/email/send', {
-				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json',
-					Authorization: `Bearer ${EMAIL_API_TOKEN}`
-				},
-				body: JSON.stringify({
-					service_id: 'default_service',
-					template_id: EMAIL_TEMPLATE_ID,
-					user_id: EMAIL_USER_ID,
-					template_params: {
-						reply_to: name,
-						name,
-						email,
-						message,
-						'g-recaptcha-response': recaptcha
-					}
-				})
-			});
+		const templateParameters = {
+			reply_to: name,
+			name,
+			email,
+			message,
+			'g-recaptcha-response': recaptcha
+		};
+
+		await emailjs.send('gmail', EMAIL_TEMPLATE_ID, templateParameters, EMAIL_USER_ID).then(async response => {
+			console.log({response});
 			await setSubmitting(false);
 			await setFieldValue('success', true);
 			setTimeout(() => resetForm(), 2000);
-		} catch {
+		}).catch(async error => {
+			console.log({error});
 			setSubmitting(false);
 			setFieldValue('success', false);
 			window.alert('Something went wrong, please try again!');
-		}
+		});
 	}
 })(ContactForm);
 

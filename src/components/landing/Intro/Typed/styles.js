@@ -13,6 +13,10 @@ export const TypeArea = styled.div`
   }
 
   @media (max-width: 960px) {
-    font-size: 16pt;
+    font-size: 26pt;
+  }
+
+  @media (max-width: 680px) {
+    font-size: 18pt;
   }
 `;

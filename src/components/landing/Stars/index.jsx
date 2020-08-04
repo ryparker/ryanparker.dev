@@ -9,27 +9,23 @@ import starIcon from 'Static/icons/star.svg';
 export const Stars = () => {
 	const {
 		github: {
-			repositoryOwner: {
-				starredRepositories: {edges}
+			user: {
+				starredRepositories: {nodes}
 			}
 		}
 	} = useStaticQuery(graphql`
 		{
 			github {
-				repositoryOwner(login: "ryparker") {
-					... on GitHub_User {
-						starredRepositories(orderBy: { field: STARRED_AT, direction: DESC }, first: 3) {
-							edges {
-								node {
-									id
-									name
-									url
-									description
-									forkCount
-									stargazers {
-										totalCount
-									}
-								}
+				user(login: "ryparker") {
+					starredRepositories(first: 3, orderBy: {field: STARRED_AT, direction: DESC}) {
+						nodes {
+							id
+							name
+							url
+							description
+							forkCount
+							stargazers {
+								totalCount
 							}
 						}
 					}
@@ -41,7 +37,7 @@ export const Stars = () => {
 		<Wrapper as={Container} id="Stars">
 			<h2>Recently Starred</h2>
 			<Grid>
-				{edges.map(({node}) => (
+				{nodes.map(node => (
 					<Item key={node.id} as="a" href={node.url} target="_blank" rel="noopener noreferrer">
 						<Card>
 							<Content>

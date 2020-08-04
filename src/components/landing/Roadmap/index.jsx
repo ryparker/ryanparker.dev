@@ -1,40 +1,80 @@
 import {
 	Details,
-	Milestone,
-	MilestoneTitle,
-	MilestonesWrapper,
+	Grid,
+	Item,
 	Thumbnail,
 	Wrapper
 } from './styles';
+import {graphql, useStaticQuery} from 'gatsby';
 
-import {Container} from 'Common';
+import {Card} from 'Common';
 import React from 'react';
-import dev from 'Static/illustrations/roadmap.svg';
+import roadmap from 'Static/illustrations/roadmap.svg';
 
-export const Roadmap = () => (
-	<Wrapper id="roadmap">
-		<MilestonesWrapper as={Container}>
+export const Roadmap = () => {
+	const {
+		github: {
+			user: {
+				project: {
+					columns: {nodes}
+				}
+			}
+		}
+	} = useStaticQuery(graphql`
+		{
+			github {
+				user(login: "ryparker") {
+					project(number: 1) {
+						columns(first: 10) {
+							nodes {
+								name
+								cards(first: 10, archivedStates: NOT_ARCHIVED) {
+									nodes {
+										id
+										note
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	`);
+
+	const onDeckCards = nodes.find(column => column.name === 'On deck').cards.nodes;
+	const doneCards = nodes.find(column => column.name === 'Done').cards.nodes;
+
+	return (
+		<Wrapper id="roadmap">
 			<Thumbnail>
-				<img src={dev} alt="Man presenting analytics"/>
+				<img src={roadmap} alt="Man presenting analytics"/>
 			</Thumbnail>
 			<Details>
 				<h2>Roadmap</h2>
-				<MilestoneTitle>On Deck</MilestoneTitle>
-				<ul>
-					<Milestone>Deploy in-house monitor solution.</Milestone>
-					<Milestone>Design & implement monitors page for operations dashboard.</Milestone>
-				</ul>
-				<MilestoneTitle>Recently Completed</MilestoneTitle>
-				<ul>
-					<Milestone>Generate JSON schemas using new API test framework.</Milestone>
-					<Milestone>Develop test harness for API testing using Jest.</Milestone>
-					<Milestone>Design and stand up an internal operations dashboard.</Milestone>
-					<Milestone>Integrate test suites into AWS deployment process.</Milestone>
-					<Milestone>Develop reporting framework that supports presenting trends in test results.</Milestone>
-					<Milestone>2020 Test automation roadmap.</Milestone>
-					<Milestone>Serverless Slack applications that interface with AWS, Jira, Github.</Milestone>
-				</ul>
+				<Grid>
+					<Item>
+						<Card>
+							<h3>On Deck</h3>
+							<ul>
+								{onDeckCards.map(card => (
+									<li key={card.id}>{card.note}</li>
+								))}
+							</ul>
+						</Card>
+					</Item>
+					<Item>
+						<Card>
+							<h3>Recently Completed</h3>
+							<ul>
+								{doneCards.map(card => (
+									<li key={card.id}>{card.note}</li>
+								))}
+							</ul>
+						</Card>
+					</Item>
+				</Grid>
 			</Details>
-		</MilestonesWrapper>
-	</Wrapper>
-);
+		</Wrapper>
+	);
+};

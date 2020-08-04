@@ -35,9 +35,6 @@ export const Details = styled.div`
     line-height: 1.3;
     color: #707070;
   }
-
-  img {
-  }
 `;
 
 export const Thumbnail = styled.div`

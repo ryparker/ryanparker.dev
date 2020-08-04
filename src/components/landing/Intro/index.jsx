@@ -4,7 +4,8 @@ import {Details, IntroWrapper, Thumbnail, Wrapper} from './styles';
 import {Header} from 'Theme';
 import React from 'react';
 import Typed from './Typed';
-import dev from 'Static/illustrations/dev.png';
+import dev from 'Static/illustrations/dev.svg';
+import headshot from 'Static/illustrations/headshot.png';
 
 function openResumeTab() {
 	window.open(
@@ -25,7 +26,8 @@ export const Intro = () => (
 				</Button>
 			</Details>
 			<Thumbnail>
-				<img src={dev} alt="Man on laptop next to git tree."/>
+				<img className="background" src={dev} alt="Man on laptop next to git tree."/>
+				<img className="overlay" src={headshot} alt="Ryan Parker head shot"/>
 			</Thumbnail>
 		</IntroWrapper>
 	</Wrapper>
