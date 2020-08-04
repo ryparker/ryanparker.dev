@@ -23,5 +23,5 @@ module.exports = {
 	},
 	foundingDate: '2019',
 	googleAnalyticsID: 'UA-150578205-1',
-	reCaptchaKey: process.env.RE_CAPTCHA_KEY
+	reCaptchaKey: process.env.GATSBY_RE_CAPTCHA_KEY
 };

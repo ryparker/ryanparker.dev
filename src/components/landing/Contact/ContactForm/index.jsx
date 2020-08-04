@@ -9,9 +9,9 @@ import React from 'react';
 import Recaptcha from 'react-google-recaptcha';
 import emailjs from 'emailjs-com';
 
-const reCaptchaKey = process.env.RE_CAPTCHA_KEY;
-const EMAIL_USER_ID = process.env.EMAIL_USER_ID;
-const EMAIL_TEMPLATE_ID = process.env.EMAIL_TEMPLATE_ID;
+const reCaptchaKey = process.env.GATSBY_RE_CAPTCHA_KEY;
+const EMAIL_USER_ID = process.env.GATSBY_EMAIL_USER_ID;
+const EMAIL_TEMPLATE_ID = process.env.GATSBY_EMAIL_TEMPLATE_ID;
 
 const ContactForm = ({setFieldValue, isSubmitting, values, errors, touched}) => (
 	<Form name="portfolio-dev" method="post">
