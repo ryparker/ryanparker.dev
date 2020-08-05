@@ -6,8 +6,6 @@ phases:
   pre_build:
     commands:
       - "yarn install"
-  test:
-    commands:
       - "yarn test:ci"
   build:
     commands:
