@@ -1,11 +1,11 @@
-name: Install-Lint-Build-Changelog
+name: Lint-Test-Changelog
 
 on:
   push:
     branches: [master]
 
 jobs:
-  build-and-update-changelog:
+  lint-test-changelog:
     runs-on: ubuntu-latest
 
     env:
@@ -27,6 +27,6 @@ jobs:
           node-version: 14.x
       - run: yarn install
       - run: yarn lint
-      - run: yarn test:run
+      - run: yarn test
       - run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
       - run: yarn run semantic-release

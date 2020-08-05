@@ -15,7 +15,7 @@
     "test": "start-server-and-test develop http://localhost:8000 cy:run",
     "test:ci": "start-server-and-test develop http://localhost:8000 cy:ci",
     "cy:open": "cypress open",
-    "cy:run": "nyc cypress run --headless",
+    "cy:run": "nyc cypress run --headless --browser electron",
     "cy:ci": "cypress run --record --key cb6d03ef-840f-4014-bf24-c7d8a3fdc9fd",
     "cy:reset": "cypress run --env updateSnapshots=true",
     "fix": "xo . --fix",
