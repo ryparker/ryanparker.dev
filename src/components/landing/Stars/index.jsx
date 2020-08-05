@@ -40,7 +40,7 @@ export const Stars = () => {
 				{nodes.map(node => (
 					<Item key={node.id} as="a" href={node.url} target="_blank" rel="noopener noreferrer">
 						<Card>
-							<Content>
+							<Content data-cy="content">
 								<h4>{node.name}</h4>
 								<p>{node.description}</p>
 							</Content>

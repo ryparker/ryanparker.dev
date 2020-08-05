@@ -44,23 +44,13 @@ export const Details = styled.div`
 
 export const Thumbnail = styled.div`
 	flex: 1;
-	position: relative;
-	display: inline-block;
 
-	.background {
-		display: block;
-		height: auto;
+	@media (max-width: 960px) {
+		width: 100%;
+		margin-bottom: 2rem;
 	}
 
-	.overlay{
-		:hover {
-			transform: rotate( 15deg );
-		}
-		width: 28%;
-		position: absolute;
-		bottom: 0;
-		right: 18%;
+	img {
+		width: 100%;
 	}
-
-
 `;

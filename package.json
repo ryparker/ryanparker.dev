@@ -11,15 +11,16 @@
   },
   "scripts": {
     "build": "gatsby build",
-    "serve": "gatsby serve",
-    "develop": "yarn clean && gatsby develop",
-    "watch": "run-p -s develop cypress",
-    "test": "yarn lint",
-    "cypress": "cypress open",
-    "update-screenshots": "cypress run --env updateSnapshots=true",
-    "lint": "xo src",
+    "develop": "gatsby develop",
+    "test": "start-server-and-test develop http://localhost:8000 cy:run",
+    "test:ci": "start-server-and-test develop http://localhost:8000 cy:ci",
+    "cy:open": "cypress open",
+    "cy:run": "nyc cypress run --headless",
+    "cy:ci": "cypress run --record --key cb6d03ef-840f-4014-bf24-c7d8a3fdc9fd",
+    "cy:reset": "cypress run --env updateSnapshots=true",
     "fix": "xo . --fix",
-    "clean": "gatsby clean"
+    "lint": "xo .",
+    "clean": "gatsby clean && cypress cache clear"
   },
   "xo": {
     "extends": [
@@ -38,6 +39,12 @@
       "cypress/no-unnecessary-waiting": 1
     }
   },
+  "nyc": {
+    "all": true,
+    "include": [
+      "src/**/*"
+    ]
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
@@ -54,6 +61,7 @@
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
       "@semantic-release/changelog",
+      "@semantic-release/npm",
       "@semantic-release/git",
       "@semantic-release/github"
     ]
@@ -61,7 +69,7 @@
   "dependencies": {
     "emailjs-com": "^2.6.3",
     "formik": "^2.1.5",
-    "gatsby": "^2.24.26",
+    "gatsby": "^2.24.27",
     "gatsby-plugin-alias-imports": "^1.0.5",
     "gatsby-plugin-canonical-urls": "^2.3.10",
     "gatsby-plugin-favicon": "^3.1.6",
@@ -77,7 +85,6 @@
     "gatsby-source-filesystem": "^2.3.23",
     "gatsby-source-graphql": "^2.6.2",
     "gatsby-transformer-sharp": "^2.5.12",
-    "node-fetch": "^2.6.0",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-anchor-link-smooth-scroll": "^1.0.12",
@@ -88,7 +95,7 @@
     "react-scroll-parallax": "^2.3.4",
     "react-typed": "^1.2.0",
     "styled-components": "^5.1.1",
-    "yup": "^0.29.2"
+    "yup": "^0.29.3"
   },
   "devDependencies": {
     "@semantic-release/changelog": "^5.0.1",
@@ -111,6 +118,7 @@
     "prettier": "^2.0.5",
     "rimraf": "3.0.2",
     "semantic-release": "^17.1.1",
+    "start-server-and-test": "^1.11.2",
     "xo": "^0.32.1"
   },
   "keywords": [

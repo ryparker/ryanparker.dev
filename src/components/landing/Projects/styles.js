@@ -35,7 +35,7 @@ export const Item = styled.div.attrs({
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
-	box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.44);
+	box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.33);
 
 	h4 {
 		color: #212121;

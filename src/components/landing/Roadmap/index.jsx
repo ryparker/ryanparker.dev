@@ -58,7 +58,7 @@ export const Roadmap = () => {
 							<h3>On Deck</h3>
 							<ul>
 								{onDeckCards.map(card => (
-									<li key={card.id}>{card.note}</li>
+									<li key={card.id} data-cy="content">{card.note}</li>
 								))}
 							</ul>
 						</Card>
@@ -68,7 +68,7 @@ export const Roadmap = () => {
 							<h3>Recently Completed</h3>
 							<ul>
 								{doneCards.map(card => (
-									<li key={card.id}>{card.note}</li>
+									<li key={card.id} data-cy="content">{card.note}</li>
 								))}
 							</ul>
 						</Card>

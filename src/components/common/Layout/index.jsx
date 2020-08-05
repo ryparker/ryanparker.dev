@@ -9,7 +9,7 @@ import React from 'react';
 export const Layout = ({children}) => (
 	<>
 		<Global/>
-		<Particles/>
+		<Particles data-cy="particles"/>
 		{children}
 		<Footer/>
 	</>

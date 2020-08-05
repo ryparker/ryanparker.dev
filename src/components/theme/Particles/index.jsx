@@ -4,6 +4,7 @@ import ReactParticles from 'react-particles-js';
 export const Particles = () => {
 	return (
 		<ReactParticles
+			data-cy="particles"
 			width="100%"
 			height="100%"
 			style={{
@@ -99,7 +100,6 @@ export const Particles = () => {
 				},
 				retina_detect: true
 			}}
-			data-cy="particles"
 		/>
 	);
 };

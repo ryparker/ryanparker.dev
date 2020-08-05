@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Wrapper = styled.div`
 	background-image: url('../illustrations/details.svg');
 	background-size: contain;
-	background-position: left top;
+	background-position: left bottom;
 	background-repeat: no-repeat;
 
 	padding: 4rem;
@@ -60,7 +60,7 @@ export const Item = styled.div.attrs({
 	'data-sal-easing': 'ease-in'
 })`
 	overflow: hidden;
-	box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.44);
+	box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.33);
 
 	h4 {
 		color: #212121;

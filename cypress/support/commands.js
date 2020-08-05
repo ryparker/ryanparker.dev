@@ -7,22 +7,25 @@
 // commands please read more here:
 // https://on.cypress.io/custom-commands
 // ***********************************************
-//
-//
-// -- This is a parent command --
-// Cypress.Commands.add("login", (email, password) => { ... })
-//
-//
-// -- This is a child command --
-// Cypress.Commands.add("drag", { prevSubject: 'element'}, (subject, options) => { ... })
-//
-//
-// -- This is a dual command --
-// Cypress.Commands.add("dismiss", { prevSubject: 'optional'}, (subject, options) => { ... })
-//
-//
-// -- This will overwrite an existing command --
-// Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+
 import {addMatchImageSnapshotCommand} from 'cypress-image-snapshot/command';
 
-addMatchImageSnapshotCommand();
+addMatchImageSnapshotCommand('matchImageSnapshot', {
+	timeout: 60000,
+	capture: 'viewport',
+	blackout: ['[data-cy="content"]'],
+	onBeforeScreenshot($element) {
+		const $tsparticles = $element.find('div#tsparticles');
+
+		if ($tsparticles) {
+			$tsparticles.hide();
+		}
+	},
+	onAfterScreenshot($element, _) {
+		const $tsparticles = $element.find('div#tsparticles');
+
+		if ($tsparticles) {
+			$tsparticles.show();
+		}
+	}
+});

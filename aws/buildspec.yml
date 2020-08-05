@@ -1,0 +1,27 @@
+version: 0.1
+phases:
+  install:
+    commands:
+      - "touch .npmignore"
+      - "npm install -g yarn"
+  pre_build:
+    commands:
+      - "yarn install"
+      - "yarn test:ci"
+  build:
+    commands:
+      - "yarn build"
+  post_build:
+    commands:
+      - 'aws s3 sync "public/" "s3://ryanparker.dev" --delete'
+      - 'aws cloudfront create-invalidation --distribution-id E28J5S6RMWA0JH --paths "/*"'
+artifacts:
+  base-directory: public
+  files:
+    - "**/*"
+  discard-paths: yes
+cache:
+  paths:
+    - ".cache/*"
+    - "node_modules/*"
+    - "public/*"

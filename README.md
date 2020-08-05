@@ -1,6 +1,7 @@
 # RyanParker.dev (My Portfolio Site)
 
-![Install-Lint-Build-Changelog](https://github.com/ryparker/ryanparker.dev/workflows/Install-Lint-Build-Changelog/badge.svg)
+[![ryanparker.dev](https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/simple/w1th9x/master&style=flat&logo=cypress)](https://dashboard.cypress.io/projects/w1th9x/runs)
+![Lint-Test-Changelog](https://github.com/ryparker/ryanparker.dev/workflows/Lint-Test-Changelog/badge.svg)
 ![AWS CodeBuild](https://codebuild.us-east-1.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoiTCtZaTR5VitTWFRXeGVyVVV5NDl1Yzk5VFA2ZFl6MkJnejVEeDlmZXJxcW5JbFR1Y2xPU21ScmJxNytmanBBc3I3amRubXJuL1kvRjVBbm94Yld1N2JvPSIsIml2UGFyYW1ldGVyU3BlYyI6IkNHT0ZFZjhuUllwQlF4UnAiLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=master)
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/xojs/xo)
 
@@ -26,7 +27,7 @@ yarn develop
 
 The site should now be running at [localhost:8000](http://localhost:8000)!
 
-## Stack
+## 🥞 Stack
 
 | Technology | Use case                           |
 | ---------- | ---------------------------------- |
@@ -34,3 +35,19 @@ The site should now be running at [localhost:8000](http://localhost:8000)!
 | React      | Modularized front end development. |
 | GraphQL    | Consumer driven data fetching.     |
 | AWS        | Hosting.                           |
+
+
+## ✅ Cypress tests
+
+<details>
+  <summary>Demo of test run</summary>
+
+  ![Cypress demo](cypress-demo.gif)
+
+</details>
+
+### 🚀 Run the tests locally
+
+```shell
+yarn test:open
+```

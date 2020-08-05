@@ -1,0 +1,32 @@
+name: Install-Lint-Build-Changelog
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  build-and-update-changelog:
+    runs-on: ubuntu-latest
+
+    env:
+      CI: true
+      GIT_AUTHOR_NAME: 'github-actions[bot]'
+      GIT_AUTHOR_EMAIL: 'github-actions[bot]@users.noreply.github.com'
+      GIT_COMMITTER_NAME: 'github-actions[bot]'
+      GIT_COMMITTER_EMAIL: 'github-actions[bot]@users.noreply.github.com'
+      NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GITHUB_TOKEN: ${{secrets.PERSONAL_GITHUB_TOKEN}}
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: '0'
+      - name: Setup Node 14.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.x
+      - run: yarn install
+      - run: yarn lint
+      - run: yarn test:run
+      - run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
+      - run: yarn run semantic-release
