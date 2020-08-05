@@ -14,6 +14,7 @@ addMatchImageSnapshotCommand('matchImageSnapshot', {
 	timeout: 60000,
 	capture: 'viewport',
 	blackout: ['[data-cy="content"]'],
+	disableTimersAndAnimations: true,
 	onBeforeScreenshot($element) {
 		const $tsparticles = $element.find('div#tsparticles');
 

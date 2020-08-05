@@ -25,8 +25,9 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 14.x
-      - run: yarn install
+      - run: apt-get install libgtk2.0-0 libgtk-3-0 libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb
+      - run: yarn install --frozen-lockfile
       - run: yarn lint
-      - run: yarn test
+      - run: yarn test:ci
       - run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
       - run: yarn run semantic-release
