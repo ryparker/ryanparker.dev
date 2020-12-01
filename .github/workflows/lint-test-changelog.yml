@@ -27,6 +27,5 @@ jobs:
           node-version: 14.x
       - run: yarn install --frozen-lockfile
       - run: yarn lint
-      - run: yarn test:ci
       - run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
       - run: yarn run semantic-release

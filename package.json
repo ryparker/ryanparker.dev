@@ -13,7 +13,7 @@
     "build": "gatsby build",
     "dev": "gatsby develop",
     "test": "start-server-and-test dev http://localhost:8000 cy:run",
-    "test:ci": "start-server-and-test dev http://localhost:8000 cy:ci",
+    "test:ci": "yarn lint",
     "cy:open": "cypress open",
     "cy:run": "nyc cypress run --headless --browser electron",
     "cy:ci": "cypress run --headless --record --key cb6d03ef-840f-4014-bf24-c7d8a3fdc9fd --parallel",
