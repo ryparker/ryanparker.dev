@@ -1,3 +1,18 @@
+# [1.1.0](https://github.com/ryparker/ryanparker.dev/compare/v1.0.2...v1.1.0) (2020-12-01)
+
+
+### Bug Fixes
+
+* **all files:** xO linter fixes ([b724cc3](https://github.com/ryparker/ryanparker.dev/commit/b724cc35cc9b29b11a96176eaca603ac1f34000d))
+* **fix recaptcha:** appending "GATSBY_" to client side env vars ([6ccb051](https://github.com/ryparker/ryanparker.dev/commit/6ccb05122784b0b55c7c416b2ce8d692515c99c8))
+* **recaptcha:** testing hardcoded sitekeys ([0a6bc24](https://github.com/ryparker/ryanparker.dev/commit/0a6bc24a8df7cf529a665c1738afe4183eafe957))
+* **yarn test:** reverted yarn lint to linter ([7e14b35](https://github.com/ryparker/ryanparker.dev/commit/7e14b35571b4a69c6c8a0189b083b1351986b338))
+
+
+### Features
+
+* **project-wide:** cypress tests, CI, Intro PNG, reduced card shadow, reoriented roadmap svg ([9acc6d2](https://github.com/ryparker/ryanparker.dev/commit/9acc6d2a185ced771ff838078c92788c63f2fdc4))
+
 ## [1.0.2](https://github.com/ryparker/ryanparker.dev/compare/v1.0.1...v1.0.2) (2020-07-31)
 
 
