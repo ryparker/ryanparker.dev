@@ -1,13 +1,13 @@
+import {Card, Container} from 'Common';
 import {
-	Details,
-	Grid,
-	Item,
+	Content,
+	RoadmapWrapper,
+	Row,
 	Thumbnail,
 	Wrapper
 } from './styles';
 import {graphql, useStaticQuery} from 'gatsby';
 
-import {Card} from 'Common';
 import React from 'react';
 import roadmap from 'Static/illustrations/roadmap.svg';
 
@@ -47,34 +47,34 @@ export const Roadmap = () => {
 
 	return (
 		<Wrapper id="roadmap">
-			<Thumbnail>
-				<img src={roadmap} alt="Man presenting analytics"/>
-			</Thumbnail>
-			<Details>
-				<h2>Roadmap</h2>
-				<Grid>
-					<Item>
-						<Card>
-							<h3>On Deck</h3>
+			<h2>Roadmap</h2>
+			<RoadmapWrapper as={Container}>
+				<Row>
+					<Thumbnail>
+						<img src={roadmap} alt="Man presenting analytics"/>
+					</Thumbnail>
+					<Card>
+						<Content data-cy="content">
+							<h4>On Deck</h4>
 							<ul>
 								{onDeckCards.map(card => (
 									<li key={card.id} data-cy="content">{card.note}</li>
 								))}
 							</ul>
-						</Card>
-					</Item>
-					<Item>
-						<Card>
-							<h3>Recently Completed</h3>
-							<ul>
-								{doneCards.map(card => (
-									<li key={card.id} data-cy="content">{card.note}</li>
-								))}
-							</ul>
-						</Card>
-					</Item>
-				</Grid>
-			</Details>
+						</Content>
+					</Card>
+				</Row>
+				<Card>
+					<Content data-cy="content">
+						<h4>Recently Completed</h4>
+						<ul>
+							{doneCards.map(card => (
+								<li key={card.id} data-cy="content">{card.note}</li>
+							))}
+						</ul>
+					</Content>
+				</Card>
+			</RoadmapWrapper>
 		</Wrapper>
 	);
 };

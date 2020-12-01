@@ -1,5 +1,5 @@
 import {Card, Container} from 'Common';
-import {Content, Grid, Item, Stats, Wrapper} from './styles';
+import {Content, Grid, ProjectWrapper, Stats, Wrapper} from './styles';
 import {graphql, useStaticQuery} from 'gatsby';
 
 import React from 'react';
@@ -37,12 +37,12 @@ export const Projects = () => {
 	`);
 
 	return (
-		<Wrapper as={Container} id="projects">
+		<Wrapper id="projects">
 			<h2>Projects</h2>
-			<Grid>
-				{nodes.map(node => (
-					<Item key={node.id} as="a" href={node.url} target="_blank" rel="noopener noreferrer">
-						<Card>
+			<ProjectWrapper as={Container}>
+				<Grid>
+					{nodes.map(node => (
+						<Card key={node.id} style={{cursor: 'pointer'}} onClick={() => window.open(node.url, '_blank')}>
 							<Content data-cy="content">
 								<h4>{node.name}</h4>
 								<p>{node.description}</p>
@@ -58,9 +58,9 @@ export const Projects = () => {
 								</div>
 							</Stats>
 						</Card>
-					</Item>
-				))}
-			</Grid>
+					))}
+				</Grid>
+			</ProjectWrapper>
 		</Wrapper>
 	);
 };

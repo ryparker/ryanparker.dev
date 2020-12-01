@@ -4,7 +4,7 @@ import {Layout, Seo} from 'Common';
 import React from 'react';
 
 const App = () => (
-	<Layout style={{position: 'absolute', overflow: 'hidden'}}>
+	<Layout>
 		<Seo/>
 		<Intro/>
 		<Projects/>

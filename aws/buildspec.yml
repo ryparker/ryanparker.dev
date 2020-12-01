@@ -1,29 +1,32 @@
-version: 0.1
+version: 0.2
 phases:
   install:
     commands:
-      - "npm install -g yarn"
-      - "yarn global add gatsby-cli"
-      - "yarn global add purgecss"
-      - apt-get update
-      - apt-get -y install libgtk2.0-0 libgtk-3-0 libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb
+      - apt-get update && apt-get install -y \
+        libgtk2.0-0 libgtk-3-0 libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb
+      - npm install -g yarn
+      - yarn global add gatsby-cli purgecss
+
   pre_build:
     commands:
-      - "yarn install --frozen-lockfile"
-      - "yarn test:ci"
+      - yarn install --frozen-lockfile
+      - yarn test:ci
+
   build:
     commands:
-      - "yarn build"
+      - yarn build
+
   post_build:
     commands:
-      - 'aws s3 sync "public/" "s3://ryanparker.dev" --delete'
-      - 'aws cloudfront create-invalidation --distribution-id E28J5S6RMWA0JH --paths "/*"'
+      - aws s3 sync public/ s3://ryanparker.dev --delete
+      - aws cloudfront create-invalidation --distribution-id E28J5S6RMWA0JH --paths '/*'
+
 artifacts:
   base-directory: public
   files:
-    - "**/*"
+    - '**/*'
   discard-paths: yes
 cache:
   paths:
-    - ".cache/*"
-    - "public/*"
+    - .cache/*
+    - public/*

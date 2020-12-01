@@ -1,5 +1,5 @@
 import {Card, Container} from 'Common';
-import {Content, Grid, Item, Stats, Wrapper} from './styles';
+import {Content, Grid, Stats, Wrapper} from './styles';
 import {graphql, useStaticQuery} from 'gatsby';
 
 import React from 'react';
@@ -38,24 +38,22 @@ export const Stars = () => {
 			<h2>Recently Starred</h2>
 			<Grid>
 				{nodes.map(node => (
-					<Item key={node.id} as="a" href={node.url} target="_blank" rel="noopener noreferrer">
-						<Card>
-							<Content data-cy="content">
-								<h4>{node.name}</h4>
-								<p>{node.description}</p>
-							</Content>
-							<Stats>
-								<div>
-									<img src={starIcon} alt="stars"/>
-									<span>{node.stargazers.totalCount}</span>
-								</div>
-								<div>
-									<img src={forkIcon} alt="forks"/>
-									<span>{node.forkCount}</span>
-								</div>
-							</Stats>
-						</Card>
-					</Item>
+					<Card key={node.id} style={{cursor: 'pointer'}} onClick={() => window.open(node.url, '_blank')}>
+						<Content data-cy="content">
+							<h4>{node.name}</h4>
+							<p>{node.description}</p>
+						</Content>
+						<Stats>
+							<div>
+								<img src={starIcon} alt="stars"/>
+								<span>{node.stargazers.totalCount}</span>
+							</div>
+							<div>
+								<img src={forkIcon} alt="forks"/>
+								<span>{node.forkCount}</span>
+							</div>
+						</Stats>
+					</Card>
 				))}
 			</Grid>
 		</Wrapper>

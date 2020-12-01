@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-	padding: 28rem 0 4rem 0;
+	padding: 28rem 4rem 4rem 4rem;
 	background-image: url('../illustrations/footer.svg');
 	background-size: cover;
 	background-position: top;
@@ -19,7 +19,7 @@ export const Wrapper = styled.div`
 export const Flex = styled.div`
 	display: flex;
 	align-items: flex-end;
-	justify-content: space-between;
+	justify-content: space-around;
 
 	@media (max-width: 680px) {
 		flex-direction: column;

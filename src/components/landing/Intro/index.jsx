@@ -1,9 +1,9 @@
 import {Button, Container} from 'Common';
-import {Details, IntroWrapper, Thumbnail, Wrapper} from './styles';
+import {Detail, IntroWrapper, Thumbnail, Wrapper} from './styles';
 
 import {Header} from 'Theme';
 import React from 'react';
-import Typed from './Typed';
+import Terminal from './Terminal';
 import dev from 'Static/illustrations/dev.png';
 
 function openResumeTab() {
@@ -17,13 +17,20 @@ export const Intro = () => (
 	<Wrapper>
 		<Header/>
 		<IntroWrapper as={Container}>
-			<Details>
+			<Detail>
 				<h1>Hi there!</h1>
-				<Typed/>
+				<Terminal actions={[
+					{command: '<span class=\'command\'>echo</span> $WHO_AM_I', response: 'I’m Ryan Parker.'},
+					{command: '<span class=\'command\'>echo</span> $WHAT_I_DO', response: 'I’m an Automation Engineer.'},
+					{command: '<span class=\'command\'>echo</span> $(<span class=\'command\'>random_specialty</span>)', response: 'I specialize in Testing Frameworks.'},
+					{command: '\`<span class=\'command\'>echo</span> $(<span class=\'command\'>random_specialty</span>)\`', response: 'I specialize in Development Tooling.'},
+					{command: '\`<span class=\'command\'>echo</span> $(<span class=\'command\'>random_specialty</span>)\`', response: 'I specialize in CI/CD Infrastructure.'},
+					{command: '\`<span class=\'command\'>echo</span> $(<span class=\'command\'>random_specialty</span>)\`', response: 'I specialize in Realtime Dashboards.'}
+				]}/>
 				<Button id="resume" onClick={() => openResumeTab()}>
-					Résumé
+					Resume
 				</Button>
-			</Details>
+			</Detail>
 			<Thumbnail>
 				<img src={dev} alt="Man on laptop next to git tree."/>
 			</Thumbnail>

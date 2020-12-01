@@ -594,11 +594,13 @@ export const Global = createGlobalStyle`
     pre tt:after {
       content: '';
     }
+
     @media only screen and (max-width: 480px) {
       html {
         font-size: 100%;
       }
     }
+
     body {
       margin: 0;
       padding: 0;

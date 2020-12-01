@@ -2,53 +2,44 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
 	padding-bottom: 4rem;
-	background-image: url('../illustrations/overlay.svg');
-	background-size: contain;
-	background-position: right top;
-	background-repeat: no-repeat;
+	flex-grow: 1
+
+	@media (max-width: 960px) {
+		padding-bottom: 1rem;
+		background-position: center center;
+	}
 `;
 
 export const IntroWrapper = styled.div`
-	padding: 4rem 0;
+	width: 100%;
 	display: flex;
+	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
+	padding-top: 4rem;
 
 	@media (max-width: 960px) {
-		flex-direction: column;
-	}
-
-	.accent {
-		color: #FF6584;
+		flex-flow: row wrap-reverse;
 	}
 `;
 
-export const Details = styled.div`
-	flex: 1;
-
-	@media (max-width: 960px) {
-		width: 100%;
-		margin-bottom: 2rem;
-	}
+export const Detail = styled.div`
+	flex-grow: 1;
 
 	h1 {
 		margin-bottom: 2rem;
 		font-size: 36pt;
 		color: #212121;
-
-		@media (max-width: 680px) {
-			font-size: 30pt;
-		}
 	}
 `;
 
 export const Thumbnail = styled.div`
-	flex: 1;
+	flex-grow: 1;
 
-	@media (max-width: 960px) {
-		width: 100%;
-		margin-bottom: 2rem;
-	}
+	background-image: url('../illustrations/cloud-overlay.svg');
+	background-size: contain;
+	background-position: center top;
+	background-repeat: no-repeat;
 
 	img {
 		width: 100%;

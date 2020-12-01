@@ -81,8 +81,7 @@ module.exports = {
 				background_color: config.backgroundColor,
 				theme_color: config.themeColor,
 				display: 'standalone',
-				icon: './static/favicon/favicon-512.png',
-				purpose: 'any maskable'
+				icon: './static/favicon/favicon-512.png'
 			}
 		},
 		'gatsby-plugin-offline',

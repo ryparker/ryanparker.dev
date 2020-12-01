@@ -1,47 +1,22 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-	padding: 4rem 2rem;
-	display: flex;
-	align-items: flex-start;
-	justify-content: space-evenly;
-	flex-direction: column;
-
-	@media (max-width: 680px) {
-    padding: 1rem;
-  }
+	padding-bottom: 4rem;
+	flex-grow: 1
 `;
 
 export const Grid = styled.div`
 	display: grid;
-	align-items: center;
 	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: 8fr;
-	gap: 1.2rem 1.2rem;
+	gap: 1.2rem;
+	width: 100%;
 
 	@media (max-width: 960px) {
 		grid-template-columns: repeat(2, 1fr);
 	}
 
 	@media (max-width: 680px) {
-		grid-template-columns: 1fr;
-	}
-`;
-
-export const Item = styled.div.attrs({
-	'data-sal': 'slide-left',
-	'data-sal-easing': 'ease-in'
-})`
-	height: 100%;
-	overflow: hidden;
-	box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.33);
-
-	h4 {
-		color: #212121;
-	}
-
-	p {
-		color: #707070;
+		grid-template-columns: repeat(1, 1fr);
 	}
 `;
 
@@ -51,7 +26,8 @@ export const Content = styled.div`
 
 export const Stats = styled.div`
 	display: flex;
-	align-items: center;
+	width: 100%;
+	align-items: flex-end;
 
 	div {
 		display: flex;
