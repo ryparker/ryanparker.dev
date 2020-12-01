@@ -33,9 +33,7 @@ The site should now be running at [localhost:8000](http://localhost:8000)!
 | ---------- | ---------------------------------- |
 | Gatsby     | Static site generator.             |
 | React      | Modularized front end development. |
-| GraphQL    | Consumer driven data fetching.     |
 | AWS        | Hosting.                           |
-
 
 ## :white_check_mark: Cypress tests
 
