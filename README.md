@@ -37,12 +37,12 @@ The site should now be running at [localhost:8000](http://localhost:8000)!
 
 ## :white_check_mark: Cypress tests
 
-<details>
+<!-- <details>
   <summary>Demo of test run</summary>
 
   ![Cypress demo](cypress-demo.gif)
 
-</details>
+</details> -->
 
 ### :rocket: Run the tests locally
 
