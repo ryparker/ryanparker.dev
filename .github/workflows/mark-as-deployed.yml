@@ -17,12 +17,20 @@ jobs:
         uses: actions/github-script@e2ddba4dfcf622c123222f25bce0589fa3d1d493
         with:
           script: |
-            github.repos.createDeployment({
+            const deployment = await github.repos.createDeployment({
               required_contexts: [],
               auto_merge: false,
               owner: context.payload.repository.owner.login,
               repo: context.payload.repository.name,
               ref: context.payload.ref,
-              environment: context.payload.ref.split('-')[0]
+              environment: `${context.payload.ref.split('-')[0]}`
+            });
+
+            await github.repos.createDeploymentStatus({
+              owner: context.payload.repository.owner.login,
+              repo: context.payload.repository.name,
+              deployment_id: deployment.id,
+              state: 'success',
+              description: `The application has been deployed to ${context.payload.ref.split('-')[0]}.ryanparker.dev via AWS CodeBuild.`
             });
           github-token: ${{secrets.GITHUB_TOKEN}}
