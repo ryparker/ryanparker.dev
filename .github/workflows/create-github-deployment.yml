@@ -1,0 +1,48 @@
+# Mark deployed commits as "deployed" in GitHub for Developers and QA who visit the repo website.
+
+
+name: Create GitHub Deployment
+
+on:
+  create
+
+jobs:
+  deploy-when-tagged-with-latest:
+    name: Deploy when tagged with `-latest`
+    runs-on: ubuntu-20.04
+
+    if: github.event.ref_type == 'tag' && endsWith(github.event.ref, '-latest')
+
+    steps:
+      - name: Create GitHub Deployment
+        uses: actions/github-script@96374ece582f3d27d61b7def6d0fd209a7058dbc
+        # https://github.com/marketplace/actions/github-script
+        # [Octokit API docs](octokit/rest.js)
+        # [Create deployment](https://docs.github.com/en/free-pro-team@latest/rest/reference/repos#create-a-deployment)
+        # [Create deployment status](https://docs.github.com/en/free-pro-team@latest/rest/reference/repos#create-a-deployment-status)
+        with:
+          script: |
+            const environment = `${context.payload.ref.split('-')[0]}`
+            const isProduction = Boolean(environment === 'prod')
+            const environmentUrl = isProduction ? 'https://ryanparker.dev' : `https://${environment}.ryanparker.dev`
+
+            const deployment = await github.repos.createDeployment({
+              owner: context.payload.repository.owner.login,
+              repo: context.payload.repository.name,
+              ref: context.payload.ref,
+              required_contexts: [],
+              auto_merge: false,
+              environment: environment,
+              description: `The application has been deployed to ${environmentUrl} via AWS CodeBuild.`,
+              production_environment: isProduction
+            });
+
+            await github.repos.createDeploymentStatus({
+              owner: context.payload.repository.owner.login,
+              repo: context.payload.repository.name,
+              deployment_id: deployment.data.id,
+              state: 'success',
+              description: `The application has been deployed to ${environmentUrl} via AWS CodeBuild.`,
+              environment_url: environmentUrl
+            });
+          github-token: ${{secrets.GITHUB_TOKEN}}
