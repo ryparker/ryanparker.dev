@@ -26,6 +26,8 @@ jobs:
               environment: `${context.payload.ref.split('-')[0]}`
             });
 
+            console.log({deployment})
+
             await github.repos.createDeploymentStatus({
               owner: context.payload.repository.owner.login,
               repo: context.payload.repository.name,
