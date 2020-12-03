@@ -23,11 +23,9 @@ jobs:
               ref: context.payload.ref,
               required_contexts: [],
               auto_merge: false,
-              environment: `${context.payload.ref.split('-')[0]}`
+              environment: `${context.payload.ref.split('-')[0]}`,
+              description: `The application has been deployed to ${context.payload.ref.split('-')[0]}.ryanparker.dev via AWS CodeBuild.`
             });
-
-            // log response
-            console.log({deployment})
 
             await github.repos.createDeploymentStatus({
               owner: context.payload.repository.owner.login,
