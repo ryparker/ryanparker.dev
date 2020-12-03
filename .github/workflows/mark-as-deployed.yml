@@ -26,12 +26,10 @@ jobs:
               environment: `${context.payload.ref.split('-')[0]}`
             });
 
-            console.log({deployment})
-
             await github.repos.createDeploymentStatus({
               owner: context.payload.repository.owner.login,
               repo: context.payload.repository.name,
-              deployment_id: deployment.id,
+              deployment_id: deployment.data.id,
               state: 'success',
               description: `The application has been deployed to ${context.payload.ref.split('-')[0]}.ryanparker.dev via AWS CodeBuild.`
             });
