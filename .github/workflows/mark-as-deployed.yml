@@ -8,7 +8,7 @@ on:
 jobs:
   mark-tagged-ref-as-deployed:
     name: Mark Tagged Ref as Deployed
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
 
     if: github.event.ref_type == 'tag' && endsWith(github.event.ref, '-latest')
 
@@ -18,13 +18,15 @@ jobs:
         with:
           script: |
             const deployment = await github.repos.createDeployment({
-              required_contexts: [],
-              auto_merge: false,
               owner: context.payload.repository.owner.login,
               repo: context.payload.repository.name,
               ref: context.payload.ref,
+              required_contexts: [],
+              auto_merge: false,
               environment: `${context.payload.ref.split('-')[0]}`
             });
+
+            console.log({deployment})
 
             await github.repos.createDeploymentStatus({
               owner: context.payload.repository.owner.login,
