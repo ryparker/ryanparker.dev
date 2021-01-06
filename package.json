@@ -81,7 +81,7 @@
     "gatsby-plugin-scroll-reveal": "^0.0.7",
     "gatsby-plugin-sharp": "^2.9.1",
     "gatsby-plugin-sitemap": "^2.7.0",
-    "gatsby-plugin-styled-components": "^3.5.0",
+    "gatsby-plugin-styled-components": "^3.8.0",
     "gatsby-source-filesystem": "^2.6.1",
     "gatsby-source-graphql": "^2.9.0",
     "gatsby-transformer-sharp": "^2.7.0",
