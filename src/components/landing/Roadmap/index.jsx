@@ -66,14 +66,14 @@ export const Roadmap = () => {
 							</Content>
 						</Card>
 						<Card>
-						<Content data-cy="content">
-							<h4>Recently Completed</h4>
-							<ul>
-								{doneCards.map(card => (
-									<li key={card.id} data-cy="content">{card.note}</li>
-								))}
-							</ul>
-						</Content>
+							<Content data-cy="content">
+								<h4>Recently Completed</h4>
+								<ul>
+									{doneCards.map(card => (
+										<li key={card.id} data-cy="content">{card.note}</li>
+									))}
+								</ul>
+							</Content>
 						</Card>
 					</Column>
 				</Row>
