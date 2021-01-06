@@ -4,7 +4,8 @@ import {
 	RoadmapWrapper,
 	Row,
 	Thumbnail,
-	Wrapper
+	Wrapper,
+	Column
 } from './styles';
 import {graphql, useStaticQuery} from 'gatsby';
 
@@ -53,27 +54,29 @@ export const Roadmap = () => {
 					<Thumbnail>
 						<img src={roadmap} alt="Man presenting analytics"/>
 					</Thumbnail>
-					<Card>
+					<Column>
+						<Card>
+							<Content data-cy="content">
+								<h4>On Deck</h4>
+								<ul>
+									{onDeckCards.map(card => (
+										<li key={card.id} data-cy="content">{card.note}</li>
+									))}
+								</ul>
+							</Content>
+						</Card>
+						<Card>
 						<Content data-cy="content">
-							<h4>On Deck</h4>
+							<h4>Recently Completed</h4>
 							<ul>
-								{onDeckCards.map(card => (
+								{doneCards.map(card => (
 									<li key={card.id} data-cy="content">{card.note}</li>
 								))}
 							</ul>
 						</Content>
-					</Card>
+						</Card>
+					</Column>
 				</Row>
-				<Card>
-					<Content data-cy="content">
-						<h4>Recently Completed</h4>
-						<ul>
-							{doneCards.map(card => (
-								<li key={card.id} data-cy="content">{card.note}</li>
-							))}
-						</ul>
-					</Content>
-				</Card>
 			</RoadmapWrapper>
 		</Wrapper>
 	);

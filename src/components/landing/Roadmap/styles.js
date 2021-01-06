@@ -17,6 +17,22 @@ export const Row = styled.div`
 	flex-direction: row;
 
 	div {
+		align-self: flex-start;
+		margin-bottom: 1.2rem;
+	}
+
+	@media (max-width: 960px) {
+		flex-direction: column;
+	}
+`;
+
+export const Column = styled.div`
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+
+	div {
+		align-self: flex-start;
 		margin-bottom: 1.2rem;
 	}
 
