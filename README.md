@@ -1,6 +1,5 @@
 # [RyanParker.dev](https://ryanparker.dev) (My Portfolio Site)
 
-[![ryanparker.dev](https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/simple/w1th9x/main&style=flat&logo=cypress)](https://dashboard.cypress.io/projects/w1th9x/runs)
 ![Lint-Test-Changelog](https://github.com/ryparker/ryanparker.dev/workflows/Lint-Test-Changelog/badge.svg)
 [![AWS CodeBuild](https://codebuild.us-east-1.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoiTCtZaTR5VitTWFRXeGVyVVV5NDl1Yzk5VFA2ZFl6MkJnejVEeDlmZXJxcW5JbFR1Y2xPU21ScmJxNytmanBBc3I3amRubXJuL1kvRjVBbm94Yld1N2JvPSIsIml2UGFyYW1ldGVyU3BlYyI6IkNHT0ZFZjhuUllwQlF4UnAiLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=main)](https://codebuild.us-east-1.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoiTCtZaTR5VitTWFRXeGVyVVV5NDl1Yzk5VFA2ZFl6MkJnejVEeDlmZXJxcW5JbFR1Y2xPU21ScmJxNytmanBBc3I3amRubXJuL1kvRjVBbm94Yld1N2JvPSIsIml2UGFyYW1ldGVyU3BlYyI6IkNHT0ZFZjhuUllwQlF4UnAiLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=main)
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/xojs/xo)

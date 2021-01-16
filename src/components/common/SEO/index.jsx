@@ -45,11 +45,11 @@ export const Seo = ({title = defaultTitle, description = defaultDescription, loc
 		<Helmet>
 			<meta name="description" content={description}/>
 			<meta name="image" content={Thumbnail}/>
+			<meta property="og:title" content={title}/>
+			<meta property="og:image" content={`${url}/thumbnail/thumbnail.png/`}/>
+			<meta property="og:description" content={description}/>
 			<meta property="og:url" content={`${url}${location}/`}/>
 			<meta property="og:type" content="website"/>
-			<meta property="og:title" content={title}/>
-			<meta property="og:description" content={description}/>
-			<meta property="og:image" content={Thumbnail}/>
 			<meta name="twitter:card" content="summary"/>
 			<meta name="twitter:creator" content={socialLinks.twitter}/>
 			<meta name="twitter:site" content={social.twitter}/>
