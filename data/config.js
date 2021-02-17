@@ -4,7 +4,7 @@ module.exports = {
 	url: 'https://ryanparker.dev',
 	author: 'Ryan Parker',
 	legalName: 'Ryan Parker',
-	defaultDescription: 'I’m Ryan and I’m an Automation Engineer!',
+	defaultDescription: 'I’m Ryan Parker, and I’m a Software Engineer.',
 	themeColor: '#6b63ff',
 	backgroundColor: '#6b63ff',
 	socialLinks: {
@@ -22,6 +22,6 @@ module.exports = {
 		zipCode: '50014'
 	},
 	foundingDate: '2019',
-	googleAnalyticsID: 'UA-150578205-1',
+	googleAnalyticsID: 'G-15E6CTF28C',
 	reCaptchaKey: '6LdEwL4UAAAAAMV4qvWijJFZ-Q2AOosMUUjQo4vp'
 };

@@ -46,7 +46,7 @@ export const Seo = ({title = defaultTitle, description = defaultDescription, loc
 			<meta name="description" content={description}/>
 			<meta name="image" content={Thumbnail}/>
 			<meta property="og:title" content={title}/>
-			<meta property="og:image" content={`${url}/thumbnail/thumbnail.png/`}/>
+			<meta property="og:image" content={Thumbnail}/>
 			<meta property="og:description" content={description}/>
 			<meta property="og:url" content={`${url}${location}/`}/>
 			<meta property="og:type" content="website"/>

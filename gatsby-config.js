@@ -3,11 +3,14 @@ const config = require('./data/config');
 
 require('dotenv').config();
 
+const siteAddress = new URL('https://ryanparker.dev');
+
 module.exports = {
 	siteMetadata: {
 		title: config.defaultTitle,
 		description: config.defaultDescription,
-		author: config.author
+		author: config.author,
+		siteUrl: siteAddress.href.slice(0, -1)
 	},
 	plugins: [
 		'gatsby-plugin-react-helmet',
@@ -48,10 +51,32 @@ module.exports = {
 			}
 		},
 		{
-			resolve: 'gatsby-plugin-google-analytics',
+			resolve: 'gatsby-plugin-google-gtag',
 			options: {
-				trackingId: config.googleAnalyticsID,
-				head: true
+				// You can add multiple tracking ids and a pageview event will be fired for all of them.
+				trackingIds: [config.googleAnalyticsID],
+				// This object gets passed directly to the gtag config command
+				// This config will be shared across all trackingIds
+				gtagConfig: {
+					// Optimize_id: 'OPT_CONTAINER_ID',
+					anonymize_ip: true,
+					cookie_expires: 0
+				},
+				// This object is used for configuration specific to this plugin
+				pluginConfig: {
+					// Puts tracking script in the head instead of the body
+					head: true,
+					// Setting this parameter is also optional
+					respectDNT: true
+					// Avoids sending pageview hits from custom paths
+					// exclude: ['/preview/**', '/do-not-track/me/too/'],
+				}
+			}
+		},
+		{
+			resolve: 'gatsby-plugin-canonical-urls',
+			options: {
+				siteUrl: siteAddress.href.slice(0, -1)
 			}
 		},
 		{
@@ -76,7 +101,7 @@ module.exports = {
 			resolve: 'gatsby-plugin-manifest',
 			options: {
 				name: config.defaultTitle,
-				short_name: 'Ryan Parker',
+				short_name: config.author,
 				start_url: '/',
 				background_color: config.backgroundColor,
 				theme_color: config.themeColor,
@@ -84,6 +109,7 @@ module.exports = {
 				icon: './static/favicon/favicon-512.png'
 			}
 		},
+		'gatsby-plugin-sitemap',
 		'gatsby-plugin-offline',
 		{
 			resolve: 'gatsby-plugin-alias-imports',
