@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/ryparker/ryanparker.dev/compare/v1.2.0...v1.2.1) (2021-02-17)
+
+
+### Bug Fixes
+
+* **mobile:** fixed many mobile view styles ([18b00ce](https://github.com/ryparker/ryanparker.dev/commit/18b00ce08eb7cc1179548f98d806a171db927c60))
+
 # [1.2.0](https://github.com/ryparker/ryanparker.dev/compare/v1.1.0...v1.2.0) (2021-02-17)
 
 
