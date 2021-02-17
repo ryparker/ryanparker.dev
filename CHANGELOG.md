@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/ryparker/ryanparker.dev/compare/v1.1.0...v1.2.0) (2021-02-17)
+
+
+### Features
+
+* **gatsby-config.js:** added manifest, sitemap, canonical urls, and support for Gtag analytics ([2795c3e](https://github.com/ryparker/ryanparker.dev/commit/2795c3e994ac30462fa6cf7ec0ab55e90457c00c))
+
 # [1.1.0](https://github.com/ryparker/ryanparker.dev/compare/v1.0.2...v1.1.0) (2020-12-01)
 
 
