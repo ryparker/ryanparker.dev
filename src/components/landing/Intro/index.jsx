@@ -17,7 +17,7 @@ export const Intro = () => (
 	<Wrapper>
 		<Header/>
 		<IntroWrapper as={Container}>
-			<Detail>
+			<Detail className="content">
 				<h1>Hi there!</h1>
 				<Terminal actions={[
 					{command: '<span class=\'command\'>echo</span> $WHO_AM_I', response: 'I’m Ryan Parker.'},
@@ -31,8 +31,8 @@ export const Intro = () => (
 					Resume
 				</Button>
 			</Detail>
-			<Thumbnail>
-				<img src={dev} alt="Man on laptop next to git tree."/>
+			<Thumbnail className="thumbnail">
+				<img src={dev} quality={100} alt="Man on laptop next to git tree."/>
 			</Thumbnail>
 		</IntroWrapper>
 	</Wrapper>

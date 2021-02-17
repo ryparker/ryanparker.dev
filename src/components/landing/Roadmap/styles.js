@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
 	padding-bottom: 4rem;
-	flex-grow: 1
+	flex-grow: 1;
 `;
 
 export const RoadmapWrapper = styled.div`

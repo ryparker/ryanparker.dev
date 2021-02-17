@@ -14,9 +14,6 @@ export const Particles = () => {
 			}}
 			params={{
 				particles: {
-					number: {
-						value: 100
-					},
 					color: {
 						value: '#6B63FF'
 					},
@@ -62,6 +59,10 @@ export const Particles = () => {
 				},
 				interactivity: {
 					detect_on: 'window',
+					onresize: {
+						density_auto: true,
+						density_area: 100
+					},
 					events: {
 						onhover: {
 							enable: true,

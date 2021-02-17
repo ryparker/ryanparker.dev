@@ -20,8 +20,7 @@
     "cy:reset": "cypress run --env updateSnapshots=true",
     "fix": "xo . --fix",
     "lint": "xo .",
-    "clean": "gatsby clean && cypress cache clear",
-    "deployToProduction": "gatsby-plugin-s3 deploy --yes && aws cloudfront create-invalidation --distribution-id E28J5S6RMWA0JH --paths \"/*\""
+    "clean": "gatsby clean && cypress cache clear"
   },
   "xo": {
     "extends": [
