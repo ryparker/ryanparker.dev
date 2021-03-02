@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/ryparker/ryanparker.dev/compare/v1.2.1...v1.2.2) (2021-03-02)
+
+
+### Bug Fixes
+
+* **social links:** corrected stackoverflow link ([58fb7c9](https://github.com/ryparker/ryanparker.dev/commit/58fb7c92b5ecf602f45d231702fd57bd427ae8c8))
+
 ## [1.2.1](https://github.com/ryparker/ryanparker.dev/compare/v1.2.0...v1.2.1) (2021-02-17)
 
 
